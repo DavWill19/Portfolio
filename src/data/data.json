@@ -1,0 +1,154 @@
+{
+  "Header": {
+    "title": "Crew Coin",
+    "paragraph": "A new way to motivate your team."
+  },
+  "About": {
+    "paragraph": "Crew Coin is a digital currency designed to be an employee incentive program. After managing thousands of employees, I realized that all employees had one thing in common. They respond best to immediate gratification. Your employees will work harder to achieve their goals, when they know they will be immediately rewarded. Crew Coin is the digital solution you've been looking for.",
+    "Why": [
+      "Setup an Account",
+      "Fill your store with products",
+      "Post announcements"
+    ],
+    "Why2": [
+      "Invite your employees to join",
+      "Give out Crew Coins",
+      "Reward your employees"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "My Wallet",
+      "largeImage": "img/portfolio/wallet.png",
+      "smallImage": "img/portfolio/wallet.png"
+    },
+    {
+      "title": "Store",
+      "largeImage": "img/portfolio/store.png",
+      "smallImage": "img/portfolio/store.png"
+    },
+    {
+      "title": "Announcements",
+      "largeImage": "img/portfolio/announcement.png",
+      "smallImage": "img/portfolio/announcement.png"
+    },
+    {
+      "title": "Send Coins",
+      "largeImage": "img/portfolio/send.png",
+      "smallImage": "img/portfolio/send.png"
+    }
+  ],
+  "Services": [
+    {
+      "icon": "fa fa-wordpress",
+      "name": "Lorem ipsum dolor",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-cart-arrow-down",
+      "name": "Consectetur adipiscing",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-cloud-download",
+      "name": "Lorem ipsum dolor",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-language",
+      "name": "Consectetur adipiscing",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-plane",
+      "name": "Lorem ipsum dolor",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-pie-chart",
+      "name": "Consectetur adipiscing",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "It's like Bitcoin for the employer! Easy to use. Great concept!",
+      "name": "Joe Huntley"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "This is a game changer. My employees stay motivated!",
+      "name": "Chris Belgium"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "I love this app! Crew Coin really drives engagement and has helped greatly with my retention problem.",
+      "name": "Jake Swicklo"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "I literally can add anything to the crew coin store. My employees love using this app!",
+      "name": "Victoria Weaver"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "Very easy to setup. I feel like I'm back in control. After covid, we had some tough times but Crew Coin helped us get back on track.",
+      "name": "Rob Bieber"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "As an employee, I love being rewarded for my work. Crew Coin keeps me motivated",
+      "name": "Bittany Morton"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "address": "827 3rd ave Duncansville, PA 16635",
+    "phone": "+1 814 937 3904",
+    "email": "admin@crew-coin.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-shopping-cart",
+      "title": "Setup Your Store",
+      "text": "Add items to your store that you know your employees will love."
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Post Announcements",
+      "text": "Tell your employees what they can do to earn Crew Coins to spend in your store."
+    },
+    {
+      "icon": "fa fa-usd",
+      "title": "Send Crew Coins",
+      "text": "Send Crew Coins to your employees to re-enforce good performance."
+    },
+    {
+      "icon": "fa fa-smile-o",
+      "title": "Instant Gratification",
+      "text": "Effective motivation for your team. Happy Employees. Happy You."
+    }
+  ]
+}
