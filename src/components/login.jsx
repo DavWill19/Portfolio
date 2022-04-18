@@ -28,6 +28,7 @@ export function Login() {
             .then(res => res.json())
             .then(data => {
                 if (data.success === true) {
+                    localStorage.setItem("token", data.token);
                     navigate('/dashboard', { state: { user: data.user } });
                 } else {
                     alert("Invalid username or password");
@@ -88,7 +89,7 @@ export function Login() {
                             </li>
                             <li>
                                 <Link to="/">
-                                    Gallery
+                                    App
                                 </Link>
                             </li>
                             <li>

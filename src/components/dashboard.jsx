@@ -28,8 +28,9 @@ export function Dashboard() {
 
     function coin(cost) {
         if (cost > 1) {
-            return (
+            return (    
                 `${cost} Crew Coins`
+
             )
         } else {
             return (
@@ -39,7 +40,7 @@ export function Dashboard() {
     }
 
     function quickAddCoins(id) {
-        let text = `Are you sure you want to add ${coins} Crew Coins to your account?`;;
+        let text = `Are you sure you want to add ${coin(coins)} to your account?`;;
         if (window.confirm(text)) {
             fetch(`https://crewcoin.herokuapp.com/crewuser/quickadd/${id}`, {
                 method: "PUT",
@@ -518,7 +519,7 @@ export function Dashboard() {
                             <div className="form-group px-5">
                                 <input
                                     min="0"
-                                    value={coins}
+                                    defaultValue={coins}
                                     onChange={(value) => { setCoins(Number(value.target.value)) }}
                                     type="number"
                                     className="form-control"
@@ -528,7 +529,7 @@ export function Dashboard() {
 
                                 />
                             </div>
-                            <Button onClick={() => quickAddCoins(user._id)} size="sm" variant="warning" className="mb-1"  >Add Coins</Button>
+                            <Button onClick={() => quickAddCoins(self._id)} size="sm" variant="warning" className="mb-1"  >Add Coins</Button>
                         </form>
                     </div>
                 </Container>

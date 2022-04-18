@@ -297,7 +297,7 @@ export function Signup() {
                                     }
                                 }
                             }
-                                className='btn btn-custom btn-lg page-scroll mb-5' >
+                                className='btn mb5 btn-custom btn-lg page-scroll mb-5' >
                                 Sign Up
                             </button>
                         </div>
