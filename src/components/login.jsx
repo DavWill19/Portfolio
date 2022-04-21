@@ -34,6 +34,7 @@ export function Login() {
                     alert("Invalid username or password");
                     console.log(data)
                 }
+                setData({});
 
             })
             .catch(err => {

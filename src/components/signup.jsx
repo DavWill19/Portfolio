@@ -11,6 +11,7 @@ export function Signup() {
 
     const [formData, setData] = React.useState({});
     const [user, setUser] = React.useState({});
+    const [disable, setDisable] = React.useState(false);
 
     const portalId = () => {
         if (formData.siteNumber) {
@@ -24,6 +25,7 @@ export function Signup() {
     }
 
     function handleForm() {
+
         fetch("https://crewcoin.herokuapp.com/crewuser/signup", {
             method: "POST",
             headers: {
@@ -48,6 +50,7 @@ export function Signup() {
 
             .then(res => res.json())
             .then(res => {
+                console.log(res)
                 if (res.success) {
                     setUser(res.user);
                     localStorage.setItem("token", res.token);
@@ -55,9 +58,11 @@ export function Signup() {
 
                 } else {
                     if (res.message) {
-                        alert(res.message + ". Please try another 4 digit number.");
+                        alert(res.message);
+                        setDisable(false);
                     } else {
                         alert(res.err.message);
+                        setDisable(false);
                     }
                 }
             })
@@ -65,8 +70,8 @@ export function Signup() {
                 console.log(err);
                 alert("Something went wrong")
             }
-
             );
+            setDisable(true)
     }
 
 
@@ -146,7 +151,7 @@ export function Signup() {
                             <p className='lead'>
                                 Create a new organization to get started with Crew Coin.
                             </p>
-                            <form action='/signup' method='POST'>
+                            <form>
                                 <div className='row'>
                                     <div className='col-sm-6'>
                                         <div className='form-group'>
@@ -278,28 +283,30 @@ export function Signup() {
                                     </div>
                                 </div>
 
-                            </form>
 
 
-                            <button onClick={
-                                () => {
 
-                                    if (formData.password === formData.confirmpassword && formData.password.length > 7 && /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(formData.password)) {
-                                        if (/.+@.+\.[A-Za-z]+$/.test(formData.username)) {
-                                            handleForm()
+                                <button disabled={disable} onClick={
+                                    () => {
+
+                                        if (formData.password === formData.confirmpassword && formData.password.length > 7 && /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(formData.password)) {
+                                            if (/.+@.+\.[A-Za-z]+$/.test(formData.username)) {
+                                                handleForm();
+                                                
+                                            } else {
+                                                alert("Please enter valid email");
+                                            }
                                         } else {
-                                            alert("Please enter valid email");
+                                            alert(
+                                                "Passwords do not match. Password Must be at least 8 characters long and contain at least one number and one special character",
+                                            );
                                         }
-                                    } else {
-                                        alert(
-                                            "Passwords do not match. Password Must be at least 8 characters long and contain at least one number and one special character",
-                                        );
                                     }
                                 }
-                            }
-                                className='btn mb5 btn-custom btn-lg page-scroll mb-5' >
-                                Sign Up
-                            </button>
+                                    className='btn mb5 btn-custom btn-lg page-scroll mb-5' >
+                                    Sign Up
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
