@@ -5,7 +5,7 @@ export const Gallery = (props) => {
     <div id='portfolio' className='text-center'>
       <div className='container'>
         <div className='section-title'>
-        <h2 className="goldscreen">App Screen Shots</h2>
+          <h2 className="goldscreen">App Screen Shots</h2>
         </div>
         <div className='row'>
           <div className='portfolio-items'>
@@ -16,6 +16,14 @@ export const Gallery = (props) => {
                 </div>
               ))
               : 'Loading...'}
+            <div className='col-xs-12'>
+            <a href="https://apps.apple.com/us/app/crew-coin/id1611964163" >
+                <img alt="crewcoinlogo" className="appstore" src={'./img/appstore.png'} />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.davwill19.crewcoin">
+                <img alt="crewcoinlogo" className="appstore" src={'./img/playstore.png'} />
+              </a>
+            </div>
           </div>
         </div>
       </div>

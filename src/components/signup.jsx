@@ -146,7 +146,6 @@ export function Signup() {
                 <div className='container mt-5'>
                     <div className='row'>
                         <div className='col-md-6 col-md-offset-3 text-center'>
-                            <img alt="crewcoinlogo" className="crewcoinMd2" src={'../img/crewcoinlogo.png'} />
                             <h2 className='gold'>Setup a new organization</h2>
                             <p className='lead'>
                                 Create a new organization to get started with Crew Coin.

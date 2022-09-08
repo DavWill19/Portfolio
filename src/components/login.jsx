@@ -142,6 +142,7 @@ export function Login() {
                                                 onChange={(value) => setData({ ...formData, password: value.target.value })}
                                             />
                                         </div>
+                                        <Link to="/forgotpassword">Forgot Password?</Link>
 
                                         <div className='form-group'>
                                             <button onClick={

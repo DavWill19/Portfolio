@@ -9,9 +9,11 @@ import { Testimonials } from "./components/testimonials";
 import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import { Dashboard } from "./components/dashboard";
+import { Password } from "./components/password";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
+import "./styles.scss"
 import {
   HashRouter as Router,
   Routes,
@@ -38,9 +40,8 @@ const App = () => {
       <>
         <Navigation />
         <Header data={landingPageData.Header} />
-        <Features data={landingPageData.Features} />
+        {/* <Features data={landingPageData.Features} /> */}
         <About data={landingPageData.About} />
-        <Gallery data={landingPageData.Gallery} />
         <Testimonials data={landingPageData.Testimonials} />
         <Contact data={landingPageData.Contact} />
       </>
@@ -55,6 +56,7 @@ const App = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/forgotpassword" element={<Password />} />
         </Routes>
       </Router>
     </div>

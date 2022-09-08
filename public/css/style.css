@@ -1,5 +1,5 @@
-
-html, body {
+html,
+body {
   font-family: "Open Sans", sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -68,7 +68,6 @@ hr {
   position: relative;
   background: #ecb601;
   border: 0;
-
 }
 .hr2 {
   height: 2px;
@@ -89,13 +88,45 @@ hr {
   margin-top: -5px;
 }
 /* Navigation */
+
 #menu {
-  padding: 15px;
+  padding: 10px;
   transition: all 0.8s;
 }
+#menu h2 {
+  font-size: 30px;
+  font-weight: 200;
+  background: linear-gradient(to right, #ffffff 0%, #a9a8a3 100%);
+  margin-bottom: 20px;
+  /* Set the background color */
+  /* Mask the color to the text, and remove the rest  */
+  -webkit-background-clip: text;
+  /* Make the text fill color value transparent so the masked background color comes through */
+  -webkit-text-fill-color: transparent;
+  margin-top: -10px;
+  margin-bottom: -20px;
+}
+
+@media screen and (max-width: 768px) {
+  #menu h2 {
+    font-size: 25px;
+    font-weight: 200;
+    background: linear-gradient(to right, #ffffff 0%, #a9a8a3 100%);
+    margin-bottom: 20px;
+    /* Set the background color */
+    /* Mask the color to the text, and remove the rest  */
+    -webkit-background-clip: text;
+    /* Make the text fill color value transparent so the masked background color comes through */
+    -webkit-text-fill-color: transparent;
+    margin-top: -10px;
+    margin-bottom: -20px;
+    margin-left: 5%;
+  }
+}
+  
 #menu.navbar-default {
-  background-color: #fff;
-  border-color: rgba(231, 231, 231, 0);
+  background-color: rgb(0, 0, 0);
+  border-color: rgb(42, 42, 42);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 #menu a.navbar-brand {
@@ -108,7 +139,7 @@ hr {
 #menu.navbar-default .navbar-nav > li > a {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
-  color: #555;
+  color: rgb(255, 255, 255);
   font-size: 15px;
   font-weight: 400;
   padding: 8px 2px;
@@ -122,7 +153,7 @@ hr {
   bottom: -1px;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, #ebc51c 0%, #f3df6a 100%);
+  background: linear-gradient(to right, rgb(207, 183, 131) 0%, #f3df6a 100%);
   content: "";
   transition: width 0.2s;
 }
@@ -143,7 +174,7 @@ hr {
   bottom: -1px !important;
   width: 100% !important;
   height: 2px !important;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%) !important;
+  background: rgb(207, 183, 131) !important;
   content: "" !important;
   transition: width 0.2s !important;
 }
@@ -170,8 +201,8 @@ hr {
 .section-title h2::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #ebc51c 0%, #f3df6a 100%);
-  height: 4px;
+  background: linear-gradient(to right, #fafafa 0%, #73777c 100%);
+  height: 2px;
   width: 60px;
   bottom: 0;
   margin-left: -30px;
@@ -234,28 +265,20 @@ a:focus,
   outline-offset: none;
 }
 /* Header Section */
+
 .intro {
-  width: auto;
-  height: auto;
   padding: 0;
-  background: url(../img/coinimage.jpg) no-repeat center ;
-  background-color: #250404;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  background: #000;
 }
-.intro .overlay {
-  background: rgba(0, 0, 0, 0.1);
+#video {
+  width: 100vw;
+  object-fit: cover;
+  height: 100vh;
+  margin-top: 4%;
 }
-.intro h1 {
-  font-family: "lato", sans-serif;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: -50;
-  margin-bottom: 200px;
+video {
+  filter: brightness(50%);
+  width: 90%;
 }
 .intro h1 span {
   font-weight: 800;
@@ -287,13 +310,20 @@ a:focus,
 }
 
 .crewcoinSm {
-  width: 200px;
-  margin-top: -10px;
-  margin-bottom: -18px;
-  margin-left: -25px;
-
+  width: 13em;
+  height: 13em;
   position: relative;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+  border: 1px solid #fff; */
+}
 
+.crewCoinGif {
+  width: 65px;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin: -15, 0, -25, 0;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
   border: 1px solid #fff; */
 }
@@ -314,7 +344,6 @@ a:focus,
   margin-bottom: 200px;
   position: relative;
   top: -320px;
-
 }
 header .intro-text {
   padding-top: 350px;
@@ -324,9 +353,7 @@ header .intro-text {
 }
 
 /* Features Section */
-#features {
-  background: #fff;
-}
+
 #features i.fa {
   font-size: 39px;
   margin-bottom: 20px;
@@ -339,30 +366,199 @@ header .intro-text {
   background: linear-gradient(to right, #ebc51c 0%, #f3df6a 100%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
 }
+#features h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ffffff 0%, #d3d2cb 100%);
+  margin-bottom: 20px;
+  /* Set the background color */
+  /* Mask the color to the text, and remove the rest  */
+  -webkit-background-clip: text;
+  /* Make the text fill color value transparent so the masked background color comes through */
+  -webkit-text-fill-color: transparent;
+}
+
+#features h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
 /* About Section */
+/* background */
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:200vh;
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
 #about {
-  padding-top: 20px;
-  padding-bottom: 50px;
-  background: #f0efe9;
+  background-color: #000;
+  position: relative;
 }
 #about h3 {
   font-size: 22px;
   margin: 0 0 20px;
 }
 #about h2 {
-  position: relative;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
+  font-weight: 300;
+  background: linear-gradient(to right, #ffffff 0%, #d3d2cb 100%);
+  margin-bottom: 20px;
+  /* Set the background color */
+  /* Mask the color to the text, and remove the rest  */
+  -webkit-background-clip: text;
+  /* Make the text fill color value transparent so the masked background color comes through */
+  -webkit-text-fill-color: transparent;
+  font-size: 5vw;
 }
-#about h2::after {
-  position: absolute;
-  content: "";
-  background: linear-gradient(to right, #dfab3b 0%, #dabf27 100%);
-  height: 4px;
-  width: 60px;
-  bottom: 0;
-  left: 0;
+
+#about a {
+  color: rgb(0, 0, 0);
+  font-size: 0.5rem;
+  font-weight: 500 !important;
+  font-family: Raleway, sans-serif;
+  font-weight: 100;
+  background: #fff;
+  margin-bottom: 20px;
+  font-size: 2vw;
+  padding: 0.7vw;
 }
+
+#about a:hover {
+  color: rgb(0, 0, 0);
+  font-weight: 500 !important;
+  font-family: Raleway, sans-serif;
+  font-weight: 100;
+  transition: ease-in-out 0.5s;
+  margin-bottom: 20px;
+  padding: 0.7vw;
+}
+
+.dev {
+  margin-top: 3.9rem;
+  -webkit-background-clip: text;
+  /* Make the text fill color value transparent so the masked background color comes through */
+  -webkit-text-fill-color: black !important;
+  background: rgb(207, 183, 131) !important;
+}
+
 #about .about-text li {
   margin-bottom: 6px;
   margin-left: 6px;
@@ -378,15 +574,355 @@ header .intro-text {
   padding-right: 8px;
 }
 #about img {
-  width: 520px;
-  margin-top: 10px;
-  background: #fff;
-  border-right: 0;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 2%;
+  filter: brightness(90%);
 }
 #about p {
   line-height: 24px;
   margin: 10px 0;
+}
+.daveDiv {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  z-index: 999;
+  top: 3.5%;
+  left: 15%;
+}
+.scrolling-words-container {
+  position: absolute;
+  top: 90%;
+  margin-top: 5%;
+}
+.dave {
+  color: #6372ff;
+}
+.message1 {
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  width: 81%;
+  height: auto;
+  z-index: 999999999;
+  color: rgb(255, 255, 255);
+  font-size: 4vw !important;
+}
+.daveImg {
+  width: 25% !important;
+  height: auto;
+  margin-bottom: 20px;
+}
+.htmlImg {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  z-index: 999;
+  top: 20%;
+  left: 59%;
+}
+.cssImg {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  z-index: 999;
+  top: 20%;
+  left: 43%;
+}
+.jsImg {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  z-index: 999;
+  top: 20%;
+  left: 28%;
+}
+.bsImg {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  z-index: 999;
+  top: 41%;
+  left: 20%;
+}
+.reactImg {
+  position: absolute;
+  width: 22%;
+  height: auto;
+  z-index: 999;
+  top: 44%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+}
+
+.electronImg {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  z-index: 999;
+  top: 42%;
+  left: 71%;
+}
+.nodeJsImg {
+  position: absolute;
+  width: 15%;
+  height: auto;
+  z-index: 999;
+  top: 59%;
+  left: 43%;
+}
+.mongoDbImg {
+  position: absolute;
+  width: 15%;
+  height: auto;
+  z-index: 999;
+  top: 77%;
+  left: 43%;
+}
+.devImg {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  z-index: 999;
+  top: 85%;
+  left: 23%;
+  filter: .5;
+}
+@media screen and (max-width: 768px) {
+  .htmlImg {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    z-index: 999;
+    top: 20%;
+    left: 59%;
+  }
+  .cssImg {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    z-index: 999;
+    top: 20%;
+    left: 43%;
+  }
+  .jsImg {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    z-index: 999;
+    top: 20%;
+    left: 28%;
+  }
+  .bsImg {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    z-index: 999;
+    top: 38%;
+    left: 20%;
+  }
+  .reactImg {
+    position: absolute;
+    width: 22%;
+    height: auto;
+    z-index: 999;
+    top: 44.5%;
+    left: 42%;
+  }
+  .electronImg {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    z-index: 999;
+    top: 39%;
+    left: 71%;
+  }
+  .nodeJsImg {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    z-index: 999;
+    top: 55%;
+    left: 43%;
+  }
+  .mongoDbImg {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    z-index: 999;
+    top: 74%;
+    left: 42%;
+  }
+}
+.contactButton {
+  position: absolute;
+  top: 12%;
+  left: 64.5%;
+  z-index: 99;
+}
+
+.greet {
+  width: 40%;
+  padding: 0 10px;
+  position: absolute;
+  top: 12%;
+  left: 35%;
+  z-index: 999;
+  float: left;
+  flex-wrap: wrap;
+}
+
+.half {
+  width: 53%;
+  padding: 0 10px;
+  position: absolute;
+  top: 1%;
+  left: 22%;
+  z-index: 999;
+  float: left;
+  flex-wrap: wrap;
+}
+
+.half2 {
+  width: 69%;
+  padding: 0 10px;
+  position: absolute;
+  top: 32%;
+  left: 20%;
+  z-index: 999;
+  float: left;
+  flex-wrap: wrap;
+}
+
+.half3 {
+  width: 52%;
+  padding: 0 10px;
+  position: absolute;
+  top: 52%;
+  left: 23%;
+  z-index: 999;
+  float: left;
+  flex-wrap: wrap;
+}
+.half4 {
+  width: 42%;
+  padding: 0 10px;
+  position: absolute;
+  top: 72%;
+  left: 28%;
+  z-index: 999;
+  float: left;
+  flex-wrap: wrap;
+}
+
+.typewriter h1 {
+  font-size: 3vw;
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  font-weight: 100;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 2.5s steps(20, end), blink-caret 0.5s step-end infinite;
+}
+.typewriter2 h1 {
+  font-size: 3vw;
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  font-weight: 100;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation-delay: 2s !important;
+  animation: typing 2.5s steps(20, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
+}
+.follow {
+  animation: follow 0.2s linear infinite;
+}
+
+@keyframes follow {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.pulse {
+  background: transparent;
+  animation: pulse-white 1.5s infinite;
+}
+
+@keyframes pulse-white {
+  0% {
+    transform: scale(1);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  25% {
+    transform: scale(1.05);
+    transform: rotate3d(0, 0, 1, 1deg);
+  }
+
+  50% {
+    transform: scale(1.05);
+    transform: rotate3d(0, 0, 1, -0deg);
+  }
+  75% {
+    transform: scale(1.05);
+    transform: rotate3d(0, 0, 1, -1deg);
+  }
+
+  100% {
+    transform: scale(1.05);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+.hide {
+  opacity: 0;
 }
 /* Services Section */
 #services {
@@ -482,7 +1018,7 @@ header .intro-text {
   transform: translateY(0);
 }
 .hover-bg:hover .hover-text {
-  opacity: .1;
+  opacity: 0.1;
 }
 .hover-bg img {
   border-radius: 1%;
@@ -491,27 +1027,82 @@ header .intro-text {
 /* Testimonials Section */
 #testimonials {
   padding: 10px 0;
-  background: #f0efe9;
+  background: linear-gradient(to bottom, #000000 0%, #080808 100%);
+}
+
+.borderDash {
+  border: 0.4rem dashed rgb(191, 191, 191);
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: ;
+}
+
+/* .spinner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  background: linear-gradient(to bottom, #5b5b5b 0%, #080808 100%);
+  transition: all 0.4s;
+} */
+
+.bord:hover .spinner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  background: linear-gradient(to bottom, #080808 0%, #171717 100%);
+  transition: all 0.3s;
+  transform: rotate3d(0, 0, 1, 180deg);
+}
+.previewImg {
+  align-self: center;
 }
 #testimonials i {
   color: #e6e6e6;
   font-size: 32px;
   margin-bottom: 20px;
 }
+
+#testimonials h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ffffff 0%, #d3d2cb 100%);
+  margin-bottom: 20px;
+  /* Set the background color */
+  /* Mask the color to the text, and remove the rest  */
+  -webkit-background-clip: text;
+  /* Make the text fill color value transparent so the masked background color comes through */
+  -webkit-text-fill-color: transparent;
+}
 .testimonial {
   position: relative;
   padding: 20px;
 }
+#testimonials h3 {
+  font-size: 1em;
+  font-weight: 100;
+  color: white;
+  margin-bottom: 20px;
+}
 .testimonial-image {
-  float: left;
-  margin-right: 15px;
+  padding: 0 !important;
+  max-height: 150px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: #232324 0px 0px 10px;
 }
 .testimonial-image,
 .testimonial-image img {
   display: block;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  filter: brightness(95%);
 }
 .testimonial-content {
   position: relative;
@@ -528,6 +1119,7 @@ header .intro-text {
   font-weight: 600;
   color: #666;
 }
+
 /* Team Section */
 #team {
   padding: 100px 0;
@@ -549,7 +1141,7 @@ header .intro-text {
 /* Contact Section */
 #contact {
   padding: 20px 0 60px;
-  background: linear-gradient(to right, #ebc51c 0%, #f3df6a 100%);
+  background: linear-gradient(to bottom, #080808 0%, #000000 100%);
   color: rgb(49, 49, 49);
 }
 #contact .section-title {
@@ -560,22 +1152,31 @@ header .intro-text {
   font-size: 16px;
 }
 #contact h2 {
-  color: rgb(49, 49, 49);
+  color: rgb(255, 255, 255);
   margin-top: 10px;
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
+
+#contact h4 {
+  color: rgb(255, 255, 255);
+}
+
+#contact p {
+  color: rgb(183, 183, 183);
+}
+
 #contact .section-title h2::after {
   position: absolute;
   content: "";
-  background: #fff;
-  height: 4px;
+  background: rgb(207, 183, 131);
+  height: 2px;
   width: 60px;
   bottom: 0;
   left: 30px;
 }
 #contact h3 {
-  color: rgb(49, 49, 49);
+  color: rgb(255, 255, 255);
   margin-top: 80px;
   margin-bottom: 25px;
   padding-bottom: 20px;
@@ -591,11 +1192,12 @@ header .intro-text {
 #contact .btn-custom {
   margin-top: 10px;
   margin-bottom: 50px;
-  background: transparent;
-  border: 2px solid #fff;
+  background: #fff;
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(49, 49, 49);
 }
 #contact .btn-custom:hover {
-  color: #1f386e;
+  color: #f8e537;
   background: #fff;
 }
 label {
@@ -613,8 +1215,8 @@ label {
   color: #444;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #ddd;
-  border-radius: 0;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 1px;
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-transition: none;
@@ -643,7 +1245,7 @@ label {
   margin: 20px 0;
 }
 #contact .contact-item span {
-  color: rgb(49, 49, 49);
+  color: rgb(255, 255, 255);
   margin-bottom: 10px;
   display: block;
 }
@@ -658,7 +1260,7 @@ label {
 #contact .social ul li {
   display: inline-block;
   margin: 0 20px;
-  box-shadow: 0 0 3 3 rgba(0, 0, 0, .5);
+  box-shadow: 0 0 3 3 rgba(0, 0, 0, 0.5);
 }
 #contact .social i.fa {
   font-size: 42px;
@@ -671,7 +1273,7 @@ label {
   color: rgb(49, 49, 49);
   border-radius: 50%;
   transition: all 0.3s;
-  box-shadow: 0 0 3 3 rgba(0, 0, 0, .5);
+  box-shadow: 0 0 3 3 rgba(0, 0, 0, 0.5);
 }
 #contact .social i.fa:hover {
   color: #f8e537;
@@ -711,7 +1313,7 @@ label {
 
 .border {
   border: 1px solid rgb(0, 0, 0);
-  box-shadow: 0 5 3 3 rgba(0, 0, 0, 5)!important;
+  box-shadow: 0 5 3 3 rgba(0, 0, 0, 5) !important;
 }
 .controlled {
   border: 1px solid rgb(209, 208, 208);
@@ -726,9 +1328,98 @@ label {
   overflow-x: auto;
   padding-left: -500px;
   padding-right: -500px;
-
+}
+.limitHeightSmall {
+  overflow-x: auto;
+  padding-left: -500px;
+  padding-right: -500px;
 }
 
 .mb5 {
   margin-bottom: 100px;
+}
+
+.appstore {
+  width: 40%;
+  padding: 5%;
+}
+
+.width-35 {
+  width: 35%;
+}
+
+.budgetModal {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  /* color: #2c2c2c */
+}
+
+.modalBudget {
+  margin-bottom: -55px !important;
+  display: flex;
+  justify-content: start;
+  margin-bottom: -15px;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.goldColor {
+  color: #ecb601;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+.border2 {
+  border-radius: 1%;
+}
+
+.bgwhite {
+  background-color: rgb(247, 247, 247);
+}
+.crewCoinGifSmall {
+  width: 15%;
+}
+.crewCoinGifSmaller {
+  width: 7%;
+}
+
+.hover:hover {
+  cursor: pointer;
+  transform: scaleY(1.02);
+  border: 1px solid #c2c1c1 !important;
+  background-color: #fffef9 !important;
+}
+
+.storeModalImg {
+  width: 70%;
+}
+
+.goldColorSmall {
+  color: #ecb601;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.video-responsive {
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }

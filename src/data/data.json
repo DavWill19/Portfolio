@@ -125,29 +125,34 @@
     }
   ],
   "Contact": {
-    "address": "827 3rd ave Duncansville, PA 16635",
+    "address": "Duncansville, PA 16635",
     "phone": "+1 814 937 3904",
     "email": "admin@crew-coin.com"
   },
   "Features": [
     {
-      "icon": "fa fa-shopping-cart",
-      "title": "Setup Your Store",
+      "icon": "fa fa-brands fa-react",
+      "title": "HTML5",
       "text": "Add items to your store that you know your employees will love."
     },
     {
       "icon": "fa fa-bullhorn",
-      "title": "Post Announcements",
+      "title": "CSS3",
       "text": "Tell your employees what they can do to earn Crew Coins to spend in your store."
     },
     {
       "icon": "fa fa-usd",
-      "title": "Send Crew Coins",
+      "title": "React",
       "text": "Send Crew Coins to your employees to re-enforce good performance."
     },
     {
       "icon": "fa fa-smile-o",
-      "title": "Instant Gratification",
+      "title": "NodeJS",
+      "text": "Effective motivation for your team. Happy Employees. Happy You."
+    },
+    {
+      "icon": "fa fa-smile-o",
+      "title": "MongoDB",
       "text": "Effective motivation for your team. Happy Employees. Happy You."
     }
   ]

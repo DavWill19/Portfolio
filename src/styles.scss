@@ -1,0 +1,39 @@
+.scrolling-words-container {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600; 
+    
+  }
+  
+  .scrolling-words-box {
+    padding-top: 0.5rem;
+    height: 3.6em;
+    margin-right: 10px;
+    overflow: hidden;
+    width: auto;
+    
+    ul {
+      padding: 0;
+      animation: scrollUp 5s infinite;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 4.9em;
+        list-style: none;
+
+      }
+    }
+  }
+  
+  // Variables
+  $item-count: 5;
+  
+  @keyframes scrollUp {
+    @for $i from 1 through ($item-count - 1) {
+      #{($i * 25) - 10%}, #{$i * 25%} {
+        transform: translateY((-100% / $item-count) * $i);
+      }
+    }
+  }

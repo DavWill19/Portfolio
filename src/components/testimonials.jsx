@@ -2,28 +2,49 @@ export const Testimonials = (props) => {
   return (
     <div id='testimonials'>
       <div className='container'>
-        <div className='section-title text-center'>
-          <h2>What do our users say?</h2>
-        </div>
-        <div className='row'>
-          {props.data
-            ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className='col-md-4'>
-                  <div className='testimonial'>
-                    <div className='testimonial-image'>
-                      {' '}
-                      <img src={d.img} alt='' />{' '}
-                    </div>
-                    <div className='testimonial-content'>
-                      <p>"{d.text}"</p>
-                      <div className='testimonial-meta'> - {d.name} </div>
-                    </div>
-                  </div>
-                </div>
-              ))
-            : 'loading'}
+        {/* <div className='section-title text-center'>
+          <h2>Portfolio</h2>
+        </div> */}
+        <div className='row text-center borderDash'>
+          <div className='col-md-4 col-xs-6'>
+            <div className='testimonial-image'>
+              <img className='previewImg' src={'../img/crewcoinPreview.png'} alt='testimonial' />
+            </div>
+            <h3>Crew Coin</h3>
+          </div>
+          <div className='col-md-4 col-xs-6'>
+            <div className='testimonial-image'>
+              <img className='previewImg' src={'../img/chiplockedPreview.gif'} alt='testimonial' />
+            </div>
+            <h3>Chip Locked</h3>
+          </div>
+          <div className='col-md-4 col-xs-6'>
+            <div className='testimonial-image'>
+              <img className='previewImg' src={'../img/wenventurePreview.png'} alt='testimonial' />
+            </div>
+            <h3>Wenventure Inc</h3>
+          </div>
+          <div className='col-md-4 col-xs-6'>
+            <div className='testimonial-image'>
+              <img className='previewImg' src={'../img/paddlePreview.png'} alt='testimonial' />
+            </div>
+            <h3>Paddleboard PA</h3>
+          </div>
+          <div className='col-md-4 col-xs-6'>
+            <div className='testimonial-image'>
+              <img className='previewImg' src={'../img/foxPreview.png'} alt='testimonial' />
+            </div>
+            <h3>Fox Landscaping</h3>
+          </div>
+          <div className='col-md-4 col-xs-6'>
+            <div className='testimonial-image'>
+              <img className='previewImg' src={'../img/crewcoinappPreview2.png'} alt='testimonial' />
+            </div>
+            <h3>Crew Coin App - React Native</h3>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
+

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
 import config from '../config'
+import React from "react";
 
 const api_key = config.API_KEY;
 
@@ -11,6 +12,7 @@ const initialState = {
 }
 export const Contact = (props) => {
   const [{ name, email, message }, setState] = useState(initialState)
+  const [disable, setDisable] = React.useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -35,6 +37,7 @@ export const Contact = (props) => {
           console.log(error.text)
         }
       )
+      setDisable(true)
   }
   return (
     <div>
@@ -43,9 +46,9 @@ export const Contact = (props) => {
           <div className='col-md-8'>
             <div className='row'>
               <div className='section-title'>
-                <h2>Get In Touch</h2>
+                <h2>Get in touch</h2>
                 <p>
-                  Please fill out the form below and we will
+                  Please fill out the form below and I will
                   get back to you as soon as possible.
                 </p>
               </div>
@@ -96,7 +99,7 @@ export const Contact = (props) => {
                   <p className='help-block text-danger'></p>
                 </div>
                 <div id='success'></div>
-                <button type='submit' className='btn btn-custom btn-lg'>
+                <button type='submit' disable={disable} className='btn btn-custom btn-lg'>
                   Send Message
                 </button>
               </form>
@@ -132,16 +135,21 @@ export const Contact = (props) => {
           <div className='col-md-12'>
             <div className='row'>
               <div className='social'>
-              <h4>Find us in the App Store or the Google Play Store Today!</h4>
+              <h4>More ways to connect</h4>
                 <ul>
                   <li>
                     <a href="https://apps.apple.com/us/app/crew-coin/id1611964163" >
-                      <i className='fa fa-apple'></i>
+                      <i className='fa fa-envelope'></i>
                     </a>
                   </li>
                   <li>
                     <a href="https://play.google.com/store/apps/details?id=com.davwill19.crewcoin">
-                      <i className='fa fa-android'></i>
+                      <i className='fa fa-linkedIn'></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.davwill19.crewcoin">
+                      <i className='fa fa-github'></i>
                     </a>
                   </li>
                 </ul>
@@ -153,7 +161,7 @@ export const Contact = (props) => {
       <div id='footer'>
         <div className='container text-center'>
           <p>
-            &copy; 2022 Crew Coin. All Rights Reserved.
+            &copy; 2022 Dev Williams. All Rights Reserved.
           </p>
         </div>
       </div>

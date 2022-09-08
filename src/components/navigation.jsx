@@ -5,7 +5,6 @@ export const Navigation = () => {
     <nav id='menu' className='navbar  navbar-default navbar-fixed-top'>
       <div className='container'>
         <div className='navbar-header'>
-
           <button
             type='button'
             className='navbar-toggle collapsed'
@@ -21,8 +20,8 @@ export const Navigation = () => {
           <ul className='navbar-nav navbar-left'>
 
             <li>
-              <Link to="/">`
-                <img alt="crewcoinlogo" className="crewcoinSm" src={'../img/crewcoinlogo.png'} />
+              <Link to="/">
+                <h2>Dave Williams</h2>
               </Link>
             </li>
             <li>
@@ -37,31 +36,29 @@ export const Navigation = () => {
           id='bs-example-navbar-collapse-1'
         >
           <ul className='nav navbar-nav navbar-right'>
-            <li>
-              <a href='#feature' className='page-scroll'>
-                Features
+            <li className="bord">
+            <div className="spinner"></div>
+              <a href='#tech' className='page-scroll go'>
+                Tech
               </a>
             </li>
-            <li>
-              <a href='#about' className='page-scroll'>
+            <li className="bord">
+            <div className="spinner"></div>
+              <a href='#about' className='page-scroll go'>
                 About
               </a>
             </li>
-            <li>
-              <a href='#portfolio' className='page-scroll'>
-                App
+            <li className="bord">
+            <div className="spinner"></div>
+              <a href='#testimonials' className='page-scroll go'>
+                Portfolio
               </a>
             </li>
-            <li>
-              <a href='#testimonials' className='page-scroll'>
-                Testimonials
+            <li className="bord">
+            <div className="spinner"></div>
+              <a href='#contact' className='page-scroll go'>
+                Contact
               </a>
-            </li>
-            <li>
-              <Link to="/signup">Sign Up</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
             </li>
           </ul>
         </div>
