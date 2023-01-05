@@ -7,7 +7,34 @@ body {
   font-weight: 400;
   width: 100% !important;
   height: 100% !important;
+  cursor: crosshair;
 }
+
+.mt-5 {
+  margin-top: 5rem !important;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 10px rgba(243, 247, 45, 0.2);
+  border-radius: 2px;
+  background-color: #000000;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #1f1f1f;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 6px rgb(70, 70, 70);
+  background-color: #171717;
+}
+/* @media screen and (max-width: 480px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+} */
+
 h2,
 h3,
 h4 {
@@ -90,8 +117,11 @@ hr {
 /* Navigation */
 
 #menu {
-  padding: 10px;
+  /* padding: 10px; */
   transition: all 0.8s;
+  overflow-x: hidden!important;
+  cursor: crosshair;
+  overflow: hidden;
 }
 #menu h2 {
   font-size: 30px;
@@ -119,11 +149,11 @@ hr {
     /* Make the text fill color value transparent so the masked background color comes through */
     -webkit-text-fill-color: transparent;
     margin-top: -10px;
-    margin-bottom: -20px;
+    margin-bottom: -200px;
     margin-left: 5%;
   }
 }
-  
+
 #menu.navbar-default {
   background-color: rgb(0, 0, 0);
   border-color: rgb(42, 42, 42);
@@ -136,6 +166,14 @@ hr {
   color: #333;
   text-transform: uppercase;
 }
+
+
+#menu.navbar-default .navbar-nav > li:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake .3s;
+  /* When the animation is finished, start again */
+  cursor: crosshair;
+}
 #menu.navbar-default .navbar-nav > li > a {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
@@ -145,6 +183,7 @@ hr {
   padding: 8px 2px;
   border-radius: 0;
   margin: 9px 20px 0;
+  cursor: crosshair;
 }
 #menu.navbar-default .navbar-nav > li > a:after {
   display: block;
@@ -153,13 +192,13 @@ hr {
   bottom: -1px;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, rgb(207, 183, 131) 0%, #f3df6a 100%);
+  background: linear-gradient(to right, rgb(237, 190, 88) 0%, rgb(233, 196, 28) 100%);
   content: "";
   transition: width 0.2s;
 }
-#menu.navbar-default .navbar-nav > li > a:hover:after {
+/* #menu.navbar-default .navbar-nav > li > a:hover:after {
   width: 100%;
-}
+} */
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -174,7 +213,7 @@ hr {
   bottom: -1px !important;
   width: 100% !important;
   height: 2px !important;
-  background: rgb(207, 183, 131) !important;
+  background: linear-gradient(to right, rgb(237, 190, 88) 0%, rgb(233, 196, 28) 100%);
   content: "" !important;
   transition: width 0.2s !important;
 }
@@ -265,92 +304,39 @@ a:focus,
   outline-offset: none;
 }
 /* Header Section */
-
-.intro {
-  padding: 0;
-  background: #000;
+#header {
+ background-color: #000;
+}
+#header h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 44px;
+  font-weight: 300;
+  color: #fff!important;
+  z-index: 999999;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 #video {
-  width: 100vw;
-  object-fit: cover;
-  height: 100vh;
-  margin-top: 4%;
-}
-video {
   filter: brightness(50%);
-  width: 90%;
+  object-fit: contain;
+  width: 100%;
+  margin-top: 1rem;
+  animation: shake .4s;
+  -webkit-mask: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
-.intro h1 span {
-  font-weight: 800;
-  color: #5ca9fb;
-}
-.crewcoinLg {
-  width: 80%;
-  position: relative;
-  top: -230px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
-  border: 1px solid #fff; */
-}
-.crewcoinMd {
-  width: 70%;
-  position: relative;
-  margin-top: -10px;
-  margin-bottom: -90px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
-  border: 1px solid #fff; */
-}
-.crewcoinMd2 {
-  width: 70%;
-  position: relative;
-  margin-top: 110px;
-  margin-bottom: -40px;
-  opacity: 0.85;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
-  border: 1px solid #fff; */
-}
+/* @media screen and (max-width: 768px) {
+  #video {
+    filter: brightness(50%);
+    object-fit: contain;
+    width: 100%;
+    margin-top: 10%;
+  }
+} */
+  
 
-.crewcoinSm {
-  width: 13em;
-  height: 13em;
-  position: relative;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
-  border: 1px solid #fff; */
-}
-
-.crewCoinGif {
-  width: 65px;
-  height: auto;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  margin: -15, 0, -25, 0;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
-  border: 1px solid #fff; */
-}
-.gold {
-  color: #302d22;
-  margin-bottom: 50px;
-  padding-top: 70px;
-  margin-bottom: 30px;
-  text-shadow: 0 0 10px rgba(80, 68, 3, 0.05);
-}
-.intro p {
-  color: #fff;
-  font-size: 62px;
-  font-weight: 300;
-  line-height: 50px;
-  margin: 0 auto;
-  margin-top: 100px;
-  margin-bottom: 200px;
-  position: relative;
-  top: -320px;
-}
-header .intro-text {
-  padding-top: 350px;
-  padding-bottom: 10px;
-  text-align: center;
-  width: auto;
-}
 
 /* Features Section */
 
@@ -385,134 +371,274 @@ header .intro-text {
   margin-bottom: 20px;
 }
 /* About Section */
+.modal-content {
+  height: 80%;
+  padding-right: 2%;
+  padding-left: 2%;
+  padding-bottom: 2%;
+  background-color: transparent;
+  background: linear-gradient(to top, #ffffff 0%, #f2f2f2 100%);
+
+}
+.modal-footer {
+  padding-top: 5px!important;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+.modal-body::-webkit-scrollbar {
+  width: 7px;
+  background-color: #F5F5F5;
+}
+.modal-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgb(139, 138, 131);
+  background-color: #e3e3e3;
+}
+.modal-body {
+  max-height: 68%;
+  overflow-y: scroll;
+  padding: 0!important;
+  border-radius: 5px;
+  border: 1px solid rgb(234, 234, 234);
+}
+.modalImage {
+  width: 100%;
+}
+.phone {
+  width: auto;
+  height: 60%;
+}
+  
+.desktop {
+  width: 100%;
+  height: auto!important;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.modal-title {
+  margin-bottom: 1%;
+  font-size: 1rem;
+  font-weight: 500!important;
+  color: rgb(33, 33, 33)!important;
+  text-transform: uppercase;
+
+}
+.rotateIn {
+  animation: rotateIn .5s;
+}
+@keyframes rotateIn {
+  0% {
+    scale: 0;
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, -250deg);
+    opacity: 0;
+  }
+  90% {
+    scale: 1.02;
+    transform-origin: center;
+    opacity: 1;
+  }
+  
+  100% {
+    scale: 1;
+    transform-origin: center;
+    transform: none;
+    opacity: 1;
+  }
+  
+}
+.spin:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: rotate 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: 10ms;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes grow {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
 /* background */
-.area{
-    background: #4e54c8;  
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
-    width: 100%;
-    height:200vh;
-    
-   
+.area {
+  background: #4e54c8;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 200vh;
 }
 
-.circles{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.circles li{
-    position: absolute;
-    display: block;
-    list-style: none;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    animation: animate 25s linear infinite;
-    bottom: -150px;
-    
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
 }
 
-.circles li:nth-child(1){
-    left: 25%;
-    width: 80px;
-    height: 80px;
-    animation-delay: 0s;
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
 }
 
-
-.circles li:nth-child(2){
-    left: 10%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 2s;
-    animation-duration: 12s;
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
 }
 
-.circles li:nth-child(3){
-    left: 70%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 4s;
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
 }
 
-.circles li:nth-child(4){
-    left: 40%;
-    width: 60px;
-    height: 60px;
-    animation-delay: 0s;
-    animation-duration: 18s;
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
-    left: 65%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 0s;
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
-    left: 75%;
-    width: 110px;
-    height: 110px;
-    animation-delay: 3s;
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
-    left: 35%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 7s;
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
-    left: 50%;
-    width: 25px;
-    height: 25px;
-    animation-delay: 15s;
-    animation-duration: 45s;
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
-    left: 20%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 2s;
-    animation-duration: 35s;
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
-    left: 85%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 11s;
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
 }
-
-
 
 @keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
 
-    0%{
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-    }
-
-    100%{
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
-    }
-
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
 }
 #about {
-  background-color: #000;
-  position: relative;
+  position: relative;  
+  background-image: url(../img/circuit.jpg);  
+  background-size: cover;
+  background-position: center;
+  cursor: crosshair;
+  }
+
+/* Flashlight Overlay */
+
+:root:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 10vmax at var(--cursorX) var(--cursorY),
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,.3) 40%,
+    rgba(0,0,0,.75) 100%
+  )
 }
+.layer {
+  background: rgba(0, 0, 0, .99);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  contain: content;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 10vmax at var(--cursorX) var(--cursorY),
+    rgba(0,0,0,.25) 10%,
+    rgba(0,0,0,.5) 50%,
+    rgba(0,0,0,.8) 80%,
+    rgba(0,0,0,.99) 100%
+  )
+}
+
 #about h3 {
   font-size: 22px;
   margin: 0 0 20px;
@@ -536,7 +662,6 @@ header .intro-text {
   font-family: Raleway, sans-serif;
   font-weight: 100;
   background: #fff;
-  margin-bottom: 20px;
   font-size: 2vw;
   padding: 0.7vw;
 }
@@ -556,8 +681,9 @@ header .intro-text {
   -webkit-background-clip: text;
   /* Make the text fill color value transparent so the masked background color comes through */
   -webkit-text-fill-color: black !important;
-  background: rgb(207, 183, 131) !important;
+  background: rgb(233, 196, 28) !important;
 }
+
 
 #about .about-text li {
   margin-bottom: 6px;
@@ -580,6 +706,10 @@ header .intro-text {
   position: relative;
   padding-top: 2%;
   filter: brightness(90%);
+}
+#about h1 {
+font-size: 3vw;
+z-index: 99999999999;
 }
 #about p {
   line-height: 24px;
@@ -610,6 +740,13 @@ header .intro-text {
   color: rgb(255, 255, 255);
   font-size: 4vw !important;
 }
+
+.messageText {
+  font-family: "Raleway", sans-serif;
+  z-index: 999999;
+  color: rgb(255, 255, 255);
+  font-size: 2vw !important;
+}
 .daveImg {
   width: 25% !important;
   height: auto;
@@ -617,11 +754,11 @@ header .intro-text {
 }
 .htmlImg {
   position: absolute;
-  width: 10%;
+  width: 11%;
   height: auto;
   z-index: 999;
   top: 20%;
-  left: 59%;
+  left: 58.5%;
 }
 .cssImg {
   position: absolute;
@@ -667,10 +804,18 @@ header .intro-text {
 }
 .nodeJsImg {
   position: absolute;
+  width: 18%;
+  height: auto;
+  z-index: 999;
+  top: 55%;
+  left: 41.5%;
+}
+.mongoDbImg {
+  position: absolute;
   width: 15%;
   height: auto;
   z-index: 999;
-  top: 59%;
+  top: 77%;
   left: 43%;
 }
 .mongoDbImg {
@@ -681,22 +826,43 @@ header .intro-text {
   top: 77%;
   left: 43%;
 }
-.devImg {
+.daveCartoon {
   position: absolute;
-  width: 40%;
+  width: 30%;
   height: auto;
   z-index: 999;
-  top: 85%;
-  left: 23%;
-  filter: .5;
+  top: 89%;
+  left: 20%;
+  filter: brightness(90%);
 }
 @media screen and (max-width: 768px) {
+  .daveDiv {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    z-index: 999;
+    top: 8.5%;
+    left: 15%;
+  }
+  .contactButton {
+    position: absolute;
+    height: auto;
+    z-index: 999;
+    margin-right: 4%;
+    margin-top: 5%;
+  }
+  .half {
+    width: 42%;
+    position: absolute;
+    z-index: 999;
+    margin-top: 8%;
+  }
   .htmlImg {
     position: absolute;
     width: 10%;
     height: auto;
     z-index: 999;
-    top: 20%;
+    top: 17%;
     left: 59%;
   }
   .cssImg {
@@ -704,7 +870,7 @@ header .intro-text {
     width: 10%;
     height: auto;
     z-index: 999;
-    top: 20%;
+    top: 17%;
     left: 43%;
   }
   .jsImg {
@@ -712,7 +878,7 @@ header .intro-text {
     width: 10%;
     height: auto;
     z-index: 999;
-    top: 20%;
+    top: 17%;
     left: 28%;
   }
   .bsImg {
@@ -720,7 +886,7 @@ header .intro-text {
     width: 10%;
     height: auto;
     z-index: 999;
-    top: 38%;
+    top: 36%;
     left: 20%;
   }
   .reactImg {
@@ -736,7 +902,7 @@ header .intro-text {
     width: 10%;
     height: auto;
     z-index: 999;
-    top: 39%;
+    top: 37.5%;
     left: 71%;
   }
   .nodeJsImg {
@@ -744,7 +910,7 @@ header .intro-text {
     width: 15%;
     height: auto;
     z-index: 999;
-    top: 55%;
+    top: 52%;
     left: 43%;
   }
   .mongoDbImg {
@@ -752,15 +918,37 @@ header .intro-text {
     width: 15%;
     height: auto;
     z-index: 999;
-    top: 74%;
+    top: 71%;
     left: 42%;
   }
 }
 .contactButton {
   position: absolute;
-  top: 12%;
+  top: 13%;
   left: 64.5%;
   z-index: 99;
+}
+
+.responsive {
+  width: 50%!important;
+  position: absolute;
+  top: 29.5%;
+  left: 35%;
+  z-index: 1!important;
+}
+
+.dissapear:hover {
+  opacity: 0;
+  transition: .3s;
+}
+
+.responsive3 {
+  width: 44%!important;
+  position: absolute;
+  top: 49%;
+  left: 15%;
+  z-index: 1!important;
+  filter: brightness(20%);
 }
 
 .greet {
@@ -775,14 +963,11 @@ header .intro-text {
 }
 
 .half {
-  width: 53%;
-  padding: 0 10px;
+  width: 31%;
   position: absolute;
-  top: 1%;
-  left: 22%;
   z-index: 999;
-  float: left;
-  flex-wrap: wrap;
+  top: 7.5%;
+  margin-left: 44.5%;
 }
 
 .half2 {
@@ -790,7 +975,7 @@ header .intro-text {
   padding: 0 10px;
   position: absolute;
   top: 32%;
-  left: 20%;
+  left: 17%;
   z-index: 999;
   float: left;
   flex-wrap: wrap;
@@ -801,7 +986,7 @@ header .intro-text {
   padding: 0 10px;
   position: absolute;
   top: 52%;
-  left: 23%;
+  left: 41%;
   z-index: 999;
   float: left;
   flex-wrap: wrap;
@@ -811,36 +996,164 @@ header .intro-text {
   padding: 0 10px;
   position: absolute;
   top: 72%;
-  left: 28%;
+  left: 36%;
   z-index: 999;
   float: left;
   flex-wrap: wrap;
 }
 
 .typewriter h1 {
-  font-size: 3vw;
+  font-size: 3.1vw;
   color: #fff;
   font-family: Raleway, sans-serif;
-  font-weight: 100;
+  font-weight: 00;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid rgb(255, 255, 255); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
   animation: typing 2.5s steps(20, end), blink-caret 0.5s step-end infinite;
 }
-.typewriter2 h1 {
-  font-size: 3vw;
-  color: #fff;
+
+.line__1 h1,
+.line__2 h1,
+.line__3 h1,
+.line__4 h1,
+.line__5 h1,
+.line__6 h1,
+.line__7 h1,
+.line__8 h1,
+.line__9 h1 {
+  white-space: nowrap; /* keep text in one line */
+  overflow: hidden; /* hide text behind the cursor */
   font-family: Raleway, sans-serif;
-  font-weight: 100;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid rgb(255, 255, 255); /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation-delay: 2s !important;
-  animation: typing 2.5s steps(20, end), blink-caret 0.5s step-end infinite;
+  font-size: 20px!important;
+  color: rgb(255, 255, 255);
+  margin: auto;
+  
+}
+
+.line__1 {
+  border-right: 2px solid rgb(230, 230, 230);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__1 2s steps(20, end) 2s 1 normal both,
+    animated-cursor__1 2s steps(20, end) 2;
+}
+
+.line__2 {
+  border-right: 2px solid rgb(230, 230, 230);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__1 2s steps(20, end) 2s 1 normal both,
+    animated-cursor__1 900ms steps(20, end) 2;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+.line__3 {
+  border-right: 2px solid rgb(230, 230, 230);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__1 2s steps(20, end) 2s 1 normal both,
+    animated-cursor__1 900ms steps(20, end) 2;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+.line__4 {
+  border-right: 2px solid rgb(230, 230, 230);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__1 2s steps(20, end) 2s 1 normal both,
+    animated-cursor__1 900ms steps(20, end) 2;
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+}
+
+.line__5 {
+  border-right: 2px solid rgb(230, 230, 230);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__1 2s steps(20, end) 2s 1 normal both,
+    animated-cursor__1 900ms steps(20, end) 2;
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+
+.line__6 {
+  border-right: 2px solid rgb(230, 230, 230);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__1 2s steps(20, end) 2s 1 normal both,
+    animated-cursor__1 900ms steps(20, end) 2;
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+.line__7 {
+  border-right: 2px solid rgb(230, 230, 230);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__1 2s steps(20, end) 2s 1 normal both,
+    animated-cursor__1 900ms steps(20, end) 2;
+  -webkit-animation-delay: 14s;
+  animation-delay: 14s;
+}
+
+.line__8 {
+  border-right: 2px solid rgb(230, 230, 230);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__1 2s steps(20, end) 1.7s 1 normal both,
+    animated-cursor__1 900ms steps(20, end) 2;
+  -webkit-animation-delay: 16s;
+  animation-delay: 16s;
+}
+
+.line__9 {
+  border-right: 2px solid rgb(230, 230, 230);
+
+  /* define animation types for text + cursor */
+  animation: animated-text__1 2s steps(20, end) 1.8s 1 normal both,
+    animated-cursor__2 900ms steps(20, end) infinite;
+  -webkit-animation-delay: 18s;
+  animation-delay: 18s;
+}
+
+@keyframes animated-cursor__1 {
+  from {
+    border-right-color: rgba(0, 0, 0, 0.9);
+  }
+  to {
+    border-right-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@keyframes animated-cursor__2 {
+  from {
+    border-right-color: rgba(0, 0, 0, 0.9);
+  }
+  to {
+    border-right-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@keyframes animated-text__1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45rem;
+  }
+}
+
+@keyframes animated-text__2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 29rem;
+  }
 }
 
 /* The typing effect */
@@ -860,7 +1173,7 @@ header .intro-text {
     border-color: transparent;
   }
   50% {
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(233, 196, 28);
   }
 }
 .follow {
@@ -1028,15 +1341,27 @@ header .intro-text {
 #testimonials {
   padding: 10px 0;
   background: linear-gradient(to bottom, #000000 0%, #080808 100%);
+  cursor: crosshair!important;
 }
 
-.borderDash {
+
+#testimonials h2 {
+  border-bottom: #e4cc61 2px solid;
+
+}
+
+#testimonials p {
+  text-decoration: none;
+  color: #7f7f7f!important;
+  margin-top: -3%;
+}
+/* .borderDash {
   border: 0.4rem dashed rgb(191, 191, 191);
   margin: 0 auto;
   padding: 20px;
   color: #fff;
   border-radius: 20px;
-}
+} */
 
 /* .spinner {
   position: absolute;
@@ -1051,48 +1376,539 @@ header .intro-text {
   position: absolute;
   height: 100%;
   width: 100%;
-  border-radius: 10%;
   background: linear-gradient(to bottom, #080808 0%, #171717 100%);
   transition: all 0.3s;
-  transform: rotate3d(0, 0, 1, 180deg);
+  transform: rotate3d(0, 0, 1, 360deg);
+  transition-delay: 300ms;
 }
 .previewImg {
   align-self: center;
+  max-height: 190px!important;
 }
-#testimonials i {
-  color: #e6e6e6;
-  font-size: 32px;
-  margin-bottom: 20px;
+
+/* #testimonials i {
+  color: #000000!important;
+  font-size: 35px!important;
+  margin-top: 7px;
+}
+#testimonials i:hover {
+  color: #eae70c!important;
+  font-size: 35px!important;
+  margin-top: 7px;
+  transition: all 0.3s;
+} */
+#testimonials i.fa {
+  font-size: 27px;
+  width: 33px;
+  height: 35px;
+  padding-top: 3.5px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(235, 235, 235);
+  color: rgb(49, 49, 49);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+#testimonials i.fa-github:hover {
+  border: 1px solid rgb(235, 235, 235);
+  color: #d7c735!important;
+  transition: all 0.3s;
+  animation: rotate 1s ease-in-out;
+}
+#testimonials p:hover {
+  color: #d7c735!important;
+  transition: all 0.3s;
+}
+
+/* i.fa-times :hover{
+  color: #d73835!important;
+  transition: all 0.3s;
+} */
+.fa-times {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px!important;
+  background-color: transparent!important;
+  border: none!important;
+  color: rgb(150, 150, 150)!important;
+  transition: all 0.3s;
+  animation: none!important;
+}
+
+#testimonials .container {
+  min-height: 7vw;
 }
 
 #testimonials h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  background: linear-gradient(to right, #ffffff 0%, #d3d2cb 100%);
-  margin-bottom: 20px;
-  /* Set the background color */
-  /* Mask the color to the text, and remove the rest  */
+  font-size: 4vw;
+  font-weight: 200;
+  font-family: Raleway, sans-serif;
+  color: #fff;
+  float: right;
+}
+
+#testimonials hr {
+  margin-top: 5px!important;
+  padding: auto!important;
+  margin: 0 auto;
+  background: #c5c5c5!important;
+  height: 1px!important;
+  margin-bottom: 5px!important;
+}
+
+#testimonials span {
+  transition: all 0.2s!important;
+  min-height: 50px;
+  cursor: crosshair!important;
+}
+#testimonials h2 span:hover {
+  background: linear-gradient(to right, #b8ad77 0%, #e4c31b 100%);
   -webkit-background-clip: text;
   /* Make the text fill color value transparent so the masked background color comes through */
   -webkit-text-fill-color: transparent;
+  font-size: 4.3vw;
+  cursor: auto;
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-bottom: auto;
+  min-height: 50px;
 }
-.testimonial {
+@keyframes myanimation {
+  from {
+      transform: rotate(0deg) scale(1);
+      border-radius: 0px;
+  }
+  to {
+      border-radius: 100px;
+      transform: rotate(360deg) scale(0.7);
+  }
+}
+
+@keyframes reverse {
+  from {
+      border-radius: 100px;
+      transform: rotate(360deg) scale(0.7);
+  }
+  to {
+      border-radius: 0px;
+      transform: rotate(0deg) scale(1);
+  }
+}
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.previewImg {
+  -webkit-filter: sepia(80%);
+  -moz-filter: sepia(80%);
+  filter: grayscale(100%);
+  /* filter: brightness(0.8); */
+  transition: all 0.5s ease;
+}
+.previewImg:hover {
+  -webkit-filter: sepia(0%);
+  -moz-filter: sepia(0%);
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.preview-image::before,
+.preview-image::after
+{
+  content: '';  
+  width: 0;
+  height: 0;
+/*   opacity:0; */
+  border: 0 solid #000;
+	position: absolute;
+  bottom: 0;
+  right: 0;
+	pointer-events: none;
+	transition-property: border-color, width, height;
+	transition-duration: .15s;
+}
+.preview-image::before{
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  transition-delay: .35s, .25s, 0s;
+}
+.preview-image::after{
+  border-top-width: 1px;
+  border-right-width: 1px;
+  transition-delay: .35s, 0s, .25s;
+}
+.preview-image:hover::before, 
+.preview-image:hover::after{
+  width: 100%;
+/*   opacity:1; */
+  height: 100%;
+  border-color: #79693f;
+  transition-duration: 0s, .25s, .25s;
+}
+.preview-image:hover::before{
+  transition-delay: 0s, 0s, .25s;
+}
+.preview-image:hover::after{
+  transition-delay: 0s, .25s, 0s;
+}
+#testimonials {
   position: relative;
-  padding: 20px;
+}
+.dashed {
+  padding-top: 20px;
+  border: dashed 3.5px rgb(158, 143, 94);
+  border-radius: 10px;
+  cursor: crosshair!important;
+  margin: auto;
 }
 #testimonials h3 {
   font-size: 1em;
   font-weight: 100;
   color: white;
-  margin-bottom: 20px;
+}
+
+.smallLogo {
+  width: 120px;
+  height: auto;
+}
+.smallLogo:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+/* .testimonial-image:hover {
+  animation: shake .3s;
+} */
+
+.testimonial-image:hover h3{
+  color:rgb(255, 245, 223)!important;
+  transform: scale(1);
+}
+ /* key frames rotate */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+.testimonial-image img:hover {
+  display: block;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer!important;
+}
+.testimonial-content {
+  position: relative;
+  overflow: hidden;
+}
+.testimonial-content p {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-style: italic;
+}
+#testimonials i:hover {
+  cursor: pointer!important;
+}
+.testimonial-meta {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+}
+
+/* Dave section */
+#dave {
+  padding: 10px 0;
+  background: linear-gradient(to bottom, #000000 0%, #080808 100%);
+}
+
+#dave h1 {
+  margin: 70px;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: Raleway, sans-serif;
+  color: #fff;
+}
+.speech:before {
+	left: 30px;
+	bottom: -50px;
+	border: 25px solid;
+	border-color: #333 transparent transparent #333;
+}
+
+.speech:after {
+	left: 38px;
+	bottom: -30px;
+	border: 15px solid;
+	border-color: #fff transparent transparent #fff;
+}
+
+
+#dave h2 {
+  margin-top: 80px;
+  font-size: 3vw!important;
+
+}
+
+#dave p {
+  text-decoration: none;
+  color: #7f7f7f!important;
+  margin-top: -3%;
+}
+/* .borderDash {
+  border: 0.4rem dashed rgb(191, 191, 191);
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+  border-radius: 20px;
+} */
+
+/* .spinner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  background: linear-gradient(to bottom, #5b5b5b 0%, #080808 100%);
+  transition: all 0.4s;
+} */
+
+.bord:hover .spinner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #080808 0%, #171717 100%);
+  transition: all 0.3s;
+  transform: rotate3d(0, 0, 1, 360deg);
+  transition-delay: 300ms;
+}
+.previewImg {
+  align-self: center;
+}
+
+/* #dave i {
+  color: #000000!important;
+  font-size: 35px!important;
+  margin-top: 7px;
+}
+#dave i:hover {
+  color: #eae70c!important;
+  font-size: 35px!important;
+  margin-top: 7px;
+  transition: all 0.3s;
+} */
+#dave i.fa {
+  font-size: 27px;
+  width: 33px;
+  height: 35px;
+  padding-top: 3.5px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(235, 235, 235);
+  color: rgb(49, 49, 49);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+#dave i.fa-github:hover {
+  border: 1px solid rgb(235, 235, 235);
+  color: #d7c735!important;
+  transition: all 0.3s;
+  animation: rotate 1s ease-in-out;
+}
+#dave p:hover {
+  color: #d7c735!important;
+  transition: all 0.3s;
+}
+
+/* i.fa-times :hover{
+  color: #d73835!important;
+  transition: all 0.3s;
+} */
+.fa-times {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px!important;
+  background-color: transparent!important;
+  border: none!important;
+  color: rgb(150, 150, 150)!important;
+  transition: all 0.3s;
+  animation: none!important;
+}
+
+#dave {
+  margin-top: -400px;
+  background: transparent;
+}
+
+#dave h2 {
+  font-size: 4vw;
+  font-weight: 200;
+  font-family: Raleway, sans-serif;
+  color: #fff;
+  float: right;
+}
+
+.smallIcon {
+  width: 80px;
+  height: auto;
+  padding: 0 5px;
+}
+#dave hr {
+  margin-top: 5px!important;
+  padding: auto!important;
+  margin: 0 auto;
+  background: #c5c5c5!important;
+  height: 1px!important;
+  margin-bottom: 5px!important;
+}
+
+#dave span {
+  transition: all 0.2s!important;
+  min-height: 50px;
+  cursor: crosshair!important;
+}
+#dave h2 span:hover {
+  background: linear-gradient(to right, #b8ad77 0%, #e4c31b 100%);
+  -webkit-background-clip: text;
+  /* Make the text fill color value transparent so the masked background color comes through */
+  -webkit-text-fill-color: transparent;
+  font-size: 4.3vw;
+  cursor: auto;
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-bottom: auto;
+  min-height: 50px;
+}
+
+
+@keyframes myanimation {
+  from {
+      transform: rotate(0deg) scale(1);
+      border-radius: 0px;
+  }
+  to {
+      border-radius: 100px;
+      transform: rotate(360deg) scale(0.7);
+  }
+}
+
+@keyframes reverse {
+  from {
+      border-radius: 100px;
+      transform: rotate(360deg) scale(0.7);
+  }
+  to {
+      border-radius: 0px;
+      transform: rotate(0deg) scale(1);
+  }
+}
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.previewImg {
+  -webkit-filter: sepia(80%);
+  -moz-filter: sepia(80%);
+  filter: grayscale(100%);
+  /* filter: brightness(0.8); */
+  transition: all 0.5s ease;
+}
+.previewImg:hover {
+  -webkit-filter: sepia(0%);
+  -moz-filter: sepia(0%);
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.preview-image::before,
+.preview-image::after
+{
+  content: '';  
+  width: 0;
+  height: 0;
+/*   opacity:0; */
+  border: 0 solid #000;
+	position: absolute;
+  bottom: 0;
+  right: 0;
+	pointer-events: none;
+	transition-property: border-color, width, height;
+	transition-duration: .15s;
+}
+.preview-image::before{
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  transition-delay: .35s, .25s, 0s;
+}
+.preview-image::after{
+  border-top-width: 1px;
+  border-right-width: 1px;
+  transition-delay: .35s, 0s, .25s;
+}
+.preview-image:hover::before, 
+.preview-image:hover::after{
+  width: 100%;
+/*   opacity:1; */
+  height: 100%;
+  border-color: #79693f;
+  transition-duration: 0s, .25s, .25s;
+}
+.preview-image:hover::before{
+  transition-delay: 0s, 0s, .25s;
+}
+.preview-image:hover::after{
+  transition-delay: 0s, .25s, 0s;
+}
+#dave {
+  position: relative;
+}
+.dashed {
+  border: dashed 3.5px rgb(158, 143, 94);
+  border-radius: 10px;
+  cursor: crosshair!important;
+  margin: auto;
+}
+#dave h3 {
+  font-size: 1em;
+  font-weight: 100;
+  color: white;
 }
 .testimonial-image {
-  padding: 0 !important;
-  max-height: 150px;
-  overflow: hidden;
-  border-radius: 5px;
-  box-shadow: #232324 0px 0px 10px;
+  padding: 10px !important;
+  /* max-height: 190px; */
+  border-radius: 10px;
+  min-height: 240px;
 }
+.smallLogo {
+  width: 120px;
+  height: auto;
+}
+.smallLogo:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+/* .testimonial-image:hover {
+  animation: shake .3s;
+} */
+
+.testimonial-image:hover h3{
+  color:rgb(255, 245, 223)!important;
+  transform: scale(1);
+}
+ /* key frames rotate */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 .testimonial-image,
 .testimonial-image img {
   display: block;
@@ -1101,7 +1917,15 @@ header .intro-text {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  filter: brightness(95%);
+  border-radius: 5px;
+}
+.testimonial-image img:hover {
+  display: block;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .testimonial-content {
   position: relative;
@@ -1145,12 +1969,15 @@ header .intro-text {
 }
 #contact .section-title {
   margin-bottom: 40px;
-  
 }
 #contact .section-title p {
   font-size: 16px;
 }
 #contact h2 {
+  font-size: 4vw;
+  font-weight: 200;
+  font-family: Raleway, sans-serif;
+  color: #fff;
   color: rgb(255, 255, 255);
   margin-top: 10px;
   margin-bottom: 15px;
@@ -1168,7 +1995,7 @@ header .intro-text {
 #contact .section-title h2::after {
   position: absolute;
   content: "";
-  background: rgb(207, 183, 131);
+  background: #e4cc61;
   height: 2px;
   width: 60px;
   bottom: 0;
@@ -1280,11 +2107,11 @@ label {
 }
 /* Footer Section*/
 #footer {
-  background: #f6f6f6;
+  background: #000000;
   padding: 30px 0;
 }
 #footer p {
-  color: #888;
+  color: rgb(255, 255, 255);
   font-size: 14px;
 }
 #footer a {
@@ -1422,3 +2249,7 @@ label {
   width: 100%;
   position: absolute;
 }
+
+
+/* game */
+

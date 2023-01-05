@@ -2,6 +2,7 @@ import { useState } from 'react'
 import emailjs from 'emailjs-com'
 import config from '../config'
 import React from "react";
+import { Fade, Flip } from 'react-awesome-reveal';
 
 const api_key = config.API_KEY;
 
@@ -37,7 +38,7 @@ export const Contact = (props) => {
           console.log(error.text)
         }
       )
-      setDisable(true)
+    setDisable(true)
   }
   return (
     <div>
@@ -46,112 +47,128 @@ export const Contact = (props) => {
           <div className='col-md-8'>
             <div className='row'>
               <div className='section-title'>
-                <h2>Get in touch</h2>
-                <p>
-                  Please fill out the form below and I will
-                  get back to you as soon as possible.
-                </p>
+                <Fade triggerOnce direction='left'>
+                  <h2>Get in touch</h2>
+                </Fade>
+                <Fade direction='left' delay={100} triggerOnce>
+                  <p>
+                    Please fill out the form below and I will
+                    get back to you as soon as possible.
+                  </p>
+                </Fade>
               </div>
-              <form name='sentMessage' validate onSubmit={handleSubmit}>
-                <div className='row'>
-                  <div className='col-md-6'>
-                    <div className='form-group'>
-                      <input
-                      value={name}
-                        type='text'
-                        id='name'
-                        name='name'
-                        className='form-control'
-                        placeholder='Name'
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className='help-block text-danger'></p>
+              <Fade triggerOnce direction='right'>
+                <form name='sentMessage' validate onSubmit={handleSubmit}>
+                  <div className='row'>
+                    <div className='col-md-6'>
+                      <div className='form-group'>
+                        <input
+                          value={name}
+                          type='text'
+                          id='name'
+                          name='name'
+                          className='form-control'
+                          placeholder='Name'
+                          required
+                          onChange={handleChange}
+                        />
+                        <p className='help-block text-danger'></p>
+                      </div>
+                    </div>
+                    <div className='col-md-6'>
+                      <div className='form-group'>
+                        <input
+                          value={email}
+                          type='email'
+                          id='email'
+                          name='email'
+                          className='form-control'
+                          placeholder='Email'
+                          required
+                          onChange={handleChange}
+                        />
+                        <p className='help-block text-danger'></p>
+                      </div>
                     </div>
                   </div>
-                  <div className='col-md-6'>
-                    <div className='form-group'>
-                      <input
-                      value={email}
-                        type='email'
-                        id='email'
-                        name='email'
-                        className='form-control'
-                        placeholder='Email'
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className='help-block text-danger'></p>
-                    </div>
+                  <div className='form-group'>
+                    <textarea
+                      value={message}
+                      name='message'
+                      id='message'
+                      className='form-control'
+                      rows='4'
+                      placeholder='Message'
+                      required
+                      onChange={handleChange}
+                    ></textarea>
+                    <p className='help-block text-danger'></p>
                   </div>
-                </div>
-                <div className='form-group'>
-                  <textarea
-                  value={message}
-                    name='message'
-                    id='message'
-                    className='form-control'
-                    rows='4'
-                    placeholder='Message'
-                    required
-                    onChange={handleChange}
-                  ></textarea>
-                  <p className='help-block text-danger'></p>
-                </div>
-                <div id='success'></div>
-                <button type='submit' disable={disable} className='btn btn-custom btn-lg'>
-                  Send Message
-                </button>
-              </form>
+                  <div id='success'></div>
+                  <button type='submit' disable={disable} className='btn btn-custom btn-lg'>
+                    Send Message
+                  </button>
+                </form>
+              </Fade>
             </div>
           </div>
           <div className='col-md-3 col-md-offset-1 contact-info'>
-            <div className='contact-item'>
-              <h3>Contact Info</h3>
-              <p>
-                <span>
-                  <i className='fa fa-map-marker'></i> Address
-                </span>
-                {props.data ? props.data.address : 'loading'}
-              </p>
-            </div>
-            <div className='contact-item'>
-              <p>
-                <span>
-                  <i className='fa fa-phone'></i> Phone
-                </span>{' '}
-                {props.data ? props.data.phone : 'loading'}
-              </p>
-            </div>
-            <div className='contact-item'>
-              <p>
-                <span>
-                  <i className='fa fa-envelope-o'></i> Email
-                </span>{' '}
-                {props.data ? props.data.email : 'loading'}
-              </p>
-            </div>
+            <Fade triggerOnce direction='right'>
+              <div className='contact-item'>
+                <h3>Contact Info</h3>
+                <p>
+                  <span>
+                    <i className='fa fa-map-marker'></i> Address
+                  </span>
+                  Duncansville, PA
+                </p>
+              </div>
+              <div className='contact-item'>
+                <p>
+                  <span>
+                    <i className='fa fa-phone'></i> Phone
+                  </span>{' '}
+                  (814) 937-3904
+                </p>
+              </div>
+              <div className='contact-item'>
+                <p>
+                  <span>
+                    <i className='fa fa-envelope-o'></i> Email
+                  </span>{' '}
+                  DavWill@live.com
+                </p>
+              </div>
+            </Fade>
           </div>
           <div className='col-md-12'>
             <div className='row'>
               <div className='social'>
-              <h4>More ways to connect</h4>
+                <Fade triggerOnce delay={600} direction='down'>
+                  <h4>More ways to connect</h4>
+                </Fade>
                 <ul>
-                  <li>
-                    <a href="https://apps.apple.com/us/app/crew-coin/id1611964163" >
-                      <i className='fa fa-envelope'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://play.google.com/store/apps/details?id=com.davwill19.crewcoin">
-                      <i className='fa fa-linkedIn'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://play.google.com/store/apps/details?id=com.davwill19.crewcoin">
-                      <i className='fa fa-github'></i>
-                    </a>
-                  </li>
+                  <Fade triggerOnce direction='up' delay={100}>
+                    <li>
+                      <a href="mailto:davwill@live.com?subject=Developer Inquiry">
+                        <i className='fa fa-envelope spin'></i>
+                      </a>
+                    </li>
+                  </Fade>
+                  <Fade triggerOnce direction='up' delay={200}>
+                    <li>
+                      <a href="https://www.linkedin.com/in/david-williams-62ba0b102/">
+                        <i className='fa fa-linkedIn spin'></i>
+                      </a>
+                    </li>
+                  </Fade>
+                  <Fade triggerOnce direction='up' delay={300}>
+                    <li>
+                      <a href="https://github.com/DavWill19">
+                        <i className='fa fa-github spin'></i>
+                      </a>
+                    </li>
+                  </Fade>
                 </ul>
               </div>
             </div>
@@ -160,7 +177,7 @@ export const Contact = (props) => {
       </div>
       <div id='footer'>
         <div className='container text-center'>
-          <p>
+          <p className='footerP'>
             &copy; 2022 Dev Williams. All Rights Reserved.
           </p>
         </div>
