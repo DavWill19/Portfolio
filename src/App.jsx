@@ -6,7 +6,7 @@ import { About } from "./components/about";
 import { Dave } from "./components/Dave";
 import { Testimonials } from "./components/testimonials";
 import { Contact } from "./components/contact";
-import { Dashboard } from "./components/dashboard";
+import { Parallax } from "./components/parallax";
 import { Password } from "./components/password";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
@@ -45,7 +45,6 @@ const App = () => {
           <Route path="/" element={<Main />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/forgotpassword" element={<Password />} />
         </Routes>
       </Router>

@@ -1,36 +1,33 @@
 import { Fade, Zoom, Flip, Rotate } from "react-awesome-reveal";
 import { useEffect, useState, useMemo } from "react";
-import { faWindowRestore } from "@fortawesome/free-solid-svg-icons";
 
 export const About = (props) => {
-
-
-
+  const [width, setwidth] = useState(window.innerWidth);
   function update(e) {
     console.log(window.innerWidth);
     var x = e.clientX || e.screenX;
     var y = e.pageY - window.outerHeight - 0 || e.screenY;
 
-    if (window.innerWidth <  800) {
-      y = e.pageY - window.outerHeight + 350  || e.screenY;
+    if (window.innerWidth < 800) {
+      y = e.pageY - window.outerHeight + 350 || e.screenY;
     }
-    else if (window.innerWidth >  800 && window.innerWidth < 900) {
+    else if (window.innerWidth > 800 && window.innerWidth < 900) {
       y = e.pageY - window.outerHeight + 300 || e.screenY;
     }
-    else if (window.innerWidth >  900 && window.innerWidth < 1000) {
+    else if (window.innerWidth > 900 && window.innerWidth < 1000) {
       y = e.pageY - window.outerHeight + 250 || e.screenY;
     }
-    else if (window.innerWidth >  1000 && window.innerWidth < 1100) {
+    else if (window.innerWidth > 1000 && window.innerWidth < 1100) {
       y = e.pageY - window.outerHeight + 200 || e.screenY;
     }
-    else if (window.innerWidth >  1100 && window.innerWidth < 1200 ) {
+    else if (window.innerWidth > 1100 && window.innerWidth < 1200) {
       y = e.pageY - window.outerHeight + 150 || e.screenY;
     }
 
-    else if (window.innerWidth >  1200 ) {
+    else if (window.innerWidth > 1200) {
       y = e.pageY - window.outerHeight + 50 || e.screenY;
     }
-    
+
 
 
     document.documentElement.style.setProperty('--cursorX', x + 'px')
@@ -65,7 +62,7 @@ export const About = (props) => {
                 <li><h2>FULL STACK</h2></li>
               </ul>
             </div>
-            <div class="bgGold">
+            <div>
               <h2 className="dev">DEVELOPER</h2>
             </div>
           </div>
@@ -84,11 +81,12 @@ export const About = (props) => {
 
   useEffect(() => {
     window.addEventListener('scroll', scrollRotate);
+    window.addEventListener('resize', () => setwidth(window.innerWidth));
+
     return () => {
       window.removeEventListener('scroll', scrollRotate);
     }
   }, [])
-
   function Html() {
     return (
       <div className='htmlImg'>
@@ -171,8 +169,8 @@ export const About = (props) => {
       return (
         // <Fade>
         <div className='half'>
-          <div class="typewriter">
-            <h1>Hi, I'm Dave Williams.</h1>
+          <div className="typewriter">
+            <h1>Let's build something!</h1>
           </div>
         </div>
       )
@@ -186,9 +184,9 @@ export const About = (props) => {
     return (
       // <Fade>
       <div className='half2'>
-        <div class="messageText">
+        <div className="messageText">
           <Fade cascade triggerOnce direction="right">
-            <h1>I build websites and apps</h1>
+            <h1>Responsive websites & apps</h1>
           </Fade>
         </div>
       </div>
@@ -198,7 +196,7 @@ export const About = (props) => {
     return (
       // <Fade>
       <div className='responsive'>
-        <div class="">
+        <div className="messageText">
           <Fade cascade delay={500} triggerOnce>
             <img className="responsive" alt="icon" src={'../img/responsive.png'} />
           </Fade>
@@ -212,9 +210,9 @@ export const About = (props) => {
     return (
       // <Fade>
       <div className='half3'>
-        <div class="messageText">
+        <div className="messageText">
           <Fade cascade delay={500} triggerOnce direction="left">
-            <h1>using modern technologies.</h1>
+            <h1>Custom software & databases</h1>
           </Fade>
         </div>
       </div>
@@ -239,7 +237,7 @@ export const About = (props) => {
       <div className='half4'>
         <div class="messageText">
           <Fade cascade delay={500} triggerOnce direction="right">
-            <h1>Let's build something!</h1>
+            <h1>and everything in between</h1>
           </Fade>
         </div>
       </div>
@@ -248,16 +246,25 @@ export const About = (props) => {
 
   function ContactButton() {
     return (
-        <div className='active contactButton wrap'>
-          <Fade delay={2300} triggerOnce cascade direction="right">
-            <a href="mailto:davwill@live.com" className="active" role="button" aria-pressed="true">CONTACT</a>
-          </Fade>
-        </div>
+      <div className='active contactButton wrap'>
+        <Fade delay={2300} triggerOnce cascade direction="right">
+          <a href="mailto:davwill@live.com" className="active" role="button" aria-pressed="true">CONTACT</a>
+        </Fade>
+      </div>
+    )
+  }
+
+  function AboutButton() {
+    return (
+      <div>
+        <button className='aboutButton'>About</button>
+      </div>
     )
   }
 
   return (
     <div id="about">
+      <AboutButton />
       <div className="layer" />
       <Dave />
       <Message1 />
@@ -276,7 +283,8 @@ export const About = (props) => {
       <NodeJs />
       <MongoDb />
       {/* <DevImage /> */}
-      <img className="about" src={'../img/about.png'} alt="about" />
+      <img alt="about" className="desktopImg" src={'../img/about.png'} />
+      <img alt="about" className="mobileImg" src={'../img/aboutMobile.png'} />
       <ul class="circles">
         <li></li>
         <li></li>

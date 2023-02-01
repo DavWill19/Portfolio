@@ -1,6 +1,7 @@
 import { Fade, Flip } from 'react-awesome-reveal';
 import React from 'react';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { useEffect, useState } from 'react';
 export const Testimonials = (props) => {
   const [image, setImage] = React.useState('');
   const [title, setTitle] = React.useState('');
@@ -9,12 +10,6 @@ export const Testimonials = (props) => {
   const [gitUrl, setgitUrl] = React.useState('');
   const [desktop, setDesktop] = React.useState('');
   const [type, setType] = React.useState('');
-
-
-
-  React.useEffect(() => {
-    console.log('useEffect');
-  }, []);
 
   function appStore() {
     if (type === 'phone') {
@@ -73,7 +68,7 @@ export const Testimonials = (props) => {
                     <p>{text}</p>
                   </a>
                   <a href={gitUrl} target='_blank' rel='noreferrer'>
-                  <p>{desktop}</p>
+                    <p>{desktop}</p>
                   </a>
                 </div>
               </div>
@@ -96,9 +91,9 @@ export const Testimonials = (props) => {
         </h2>
       </div>
 
-      <div className='container dashed row'>
+      <div className=' dashed row'>
         <Fade triggerOnce cascade>
-          <div className='col-md-4 col-xs-6'>
+          <div className='col-md-4 col-sm-6 col-xs-6 noPad noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/crewcoinweb');
@@ -110,7 +105,7 @@ export const Testimonials = (props) => {
           </div>
         </Fade>
         <Fade delay={500} triggerOnce cascade>
-          <div className='col-md-4 col-xs-6'>
+          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType('phone'); setDesktop(''); setgitUrl('https://github.com/DavWill19/crewcoin');
@@ -122,11 +117,11 @@ export const Testimonials = (props) => {
           </div>
         </Fade>
         <Fade delay={100} triggerOnce cascade>
-          <div className='col-md-4 col-xs-6'>
+          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType(''); setDesktop('');setgitUrl('https://github.com/DavWill19/chiplocked');
-                setImage('./img/chiplockedPreview.gif'); setTitle('Chip-locked Preview'); setUrl(`https://www.chiplocked.com/`); setText('www.chiplocked.com');
+                setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/chiplocked');
+                setImage('./img/chiplockedPreview.png'); setTitle('Chip-locked Preview'); setUrl(`https://www.chiplocked.com/`); setText('www.chiplocked.com');
               }}
                 className='previewImg' src={'../img/chiplockedPreviewSmall.png'} alt='testimonial' />
               <h3 className='text-center'>Chip Locked Web</h3>
@@ -134,7 +129,7 @@ export const Testimonials = (props) => {
           </div>
         </Fade>
         <Fade delay={200} triggerOnce cascade>
-          <div className='col-md-4 col-xs-6'>
+          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/Wenventure');
@@ -146,23 +141,23 @@ export const Testimonials = (props) => {
           </div>
         </Fade>
         <Fade delay={300} triggerOnce cascade>
-          <div className='col-md-4 col-xs-6'>
+          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/PaddleApp');
                 setImage('./img/paddlePreview.png'); setTitle('Paddle Pa Preview'); setUrl(`https://www.paddle-pa.com/`); setText('www.paddle-pa.com');
               }}
                 className='previewImg' src={'../img/paddlePreviewSmall.png'} alt='testimonial' />
-              <h3 className='text-center'>Paddleboard Web App</h3>
+              <h3 className='text-center'>Paddle Web App</h3>
             </div>
           </div>
         </Fade>
         <Fade delay={400} triggerOnce cascade>
-          <div className='col-md-4 col-xs-6'>
+          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/foxlandscaping');
-                setImage('./img/foxPreview.png'); setTitle('Fox Landscaping Preview'); setUrl(`https://fox-landscaping.netlify.app/`); setText('www.fox-landscaping.com');
+                setImage('./img/foxPreview2.png'); setTitle('Fox Landscaping Preview'); setUrl(`https://fox-landscaping.netlify.app/`); setText('www.fox-landscaping.com');
               }}
                 className='previewImg' src={'../img/foxPreviewSmall.png'} alt='testimonial' />
               <h3 className='text-center'>Fox Landscaping Web</h3>
@@ -171,7 +166,7 @@ export const Testimonials = (props) => {
         </Fade>
 
         <Fade delay={600} triggerOnce cascade>
-          <div className='col-md-4 col-xs-6'>
+          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType('desktop'); setgitUrl('https://github.com/DavWill19/borrowloan');
@@ -183,8 +178,9 @@ export const Testimonials = (props) => {
             </div>
           </div>
         </Fade>
+
         <Fade delay={700} triggerOnce cascade>
-          <div className='col-md-4 col-xs-6'>
+          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType('desktop');
@@ -197,7 +193,7 @@ export const Testimonials = (props) => {
           </div>
         </Fade>
         <Fade delay={800} triggerOnce cascade>
-          <div className='col-md-4 col-xs-6'>
+          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType('desktop'); setgitUrl('https://github.com/DavWill19/moralesurveyreact');

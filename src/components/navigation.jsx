@@ -24,9 +24,6 @@ export const Navigation = () => {
                 <h2>Dave Williams</h2>
               </Link>
             </li>
-            <li>
-
-            </li>
           </ul>
 
         </div>
@@ -38,13 +35,13 @@ export const Navigation = () => {
           <ul className='nav navbar-nav navbar-right'>
             <li className="bord">
             <div className="spinner"></div>
-              <a href='#tech' className='page-scroll go'>
+              <a href='#about' className='page-scroll go'>
                 Tech
               </a>
             </li>
             <li className="bord">
             <div className="spinner"></div>
-              <a href='#about' className='page-scroll go'>
+              <a href='#me' className='page-scroll go'>
                 About
               </a>
             </li>
