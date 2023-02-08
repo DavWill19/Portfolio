@@ -41,7 +41,7 @@ export const Navigation = () => {
             </li>
             <li className="bord">
             <div className="spinner"></div>
-              <a href='#me' className='page-scroll go'>
+              <a href='#aboutButton' className='page-scroll go'>
                 About
               </a>
             </li>

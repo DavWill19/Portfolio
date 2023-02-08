@@ -23,22 +23,24 @@ export const Contact = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setDisable(true)
     console.log(name, email, message)
     emailjs
       .sendForm(
-        'service_otasa49', 'template_qxdmg3b', e.target, api_key
+        'service_otasa49', 'template_8zy3hz9', e.target, api_key
       )
       .then(
         (result) => {
           console.log(result.text)
           clearState()
           alert('Message sent!')
+          setDisable(false)
         },
         (error) => {
           console.log(error.text)
+          setDisable(false)
         }
       )
-    setDisable(true)
   }
   return (
     <div>
@@ -105,7 +107,10 @@ export const Contact = (props) => {
                     <p className='help-block text-danger'></p>
                   </div>
                   <div id='success'></div>
-                  <button type='submit' disable={disable} className='btn btn-custom btn-lg'>
+                  <button type='submit'
+                  // disable button after submit
+                  disabled={disable}
+                   className='btn btn-custom btn-lg'>
                     Send Message
                   </button>
                 </form>

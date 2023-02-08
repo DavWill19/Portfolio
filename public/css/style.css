@@ -29,7 +29,8 @@ body::-webkit-scrollbar-thumb {
   background-color: #171717;
 }
 @media screen and (max-width: 768px) {
-  body, html {
+  body,
+  html {
     overflow-x: hidden !important;
   }
 }
@@ -639,6 +640,299 @@ a:focus,
   color: rgb(33, 33, 33) !important;
   text-transform: uppercase;
 }
+.circuitGif {
+  position: absolute;
+  top: 50;
+  left: 0;
+  width: 120%!important;
+  filter: sepia(100%) !important;
+  animation: fade 2.1s linear 2.1s forwards !important;
+  /* blur the border of the image */
+  border-radius: 10%;
+  -webkit-mask: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0)
+  );
+}
+/* /* scale in animation */
+@keyframes growFromCenter {
+  0% {
+    opacity: 0;
+    filter: blur(0px);
+  }
+  70% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0px);
+  }
+  85% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(-2px);
+  }
+  90% {
+    opacity: 1;
+    filter: blur(4px);
+    transform: translateY(2px);
+  }
+  95% {
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-1px);
+    scale: 1;
+  }
+
+  99% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0px);
+    transform: translateY(0px);
+    scale: 1.03;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0px);
+    transform: translateY(0px);
+    scale: 1;
+  }
+}
+.aboutHr {
+  width: 60%;
+  height: 1px;
+  position: absolute;
+  top: 30;
+  left: 0;
+}
+.grow {
+  font-size: 2rem;
+  font-weight: 200;
+  opacity: 0;
+  animation: growFromCenter 2.9s forwards;
+  animation-delay: 1s !important;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(100%);
+    scale: 0;
+  }
+  80% {
+    transform: translateY(100%);
+    scale: 0;
+  }
+  100% {
+    transform: translateY(0);
+    scale: 1;
+  }
+}
+.slideLeft {
+  animation: slideInFromLeft 3.2s;
+}
+/* animation that makes imageshrink then dissappear */
+@keyframes fade {
+  0% {
+    opacity: 1;
+    filter: blur(2px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    filter: blur(0px);
+  }
+}
+.modal2::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  border-radius: 2px;
+  background-color: transparent;
+}
+.modal2::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+.modal2::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  -webkit-box-shadow: transparent;
+  background-color: transparent;
+}
+.modal-backdrop {
+  background-color: rgb(0, 0, 0, 0.99)!important;
+}
+.modal2-content {
+  margin-top: 10%;
+  border-radius: 10px;
+  overflow: hidden !important;
+  max-height: fit-content;
+  background-color: rgb(0, 0, 0, 0.39);
+  padding: 10,10,10,10!important;
+
+}
+
+.modal2-body {
+  position: absolute;
+  top: 18%;
+  padding: 0 !important;
+  color: rgb(255, 255, 255) !important;
+}
+.modal2-title {
+  position: absolute;
+  top: 0;
+  margin-bottom: 1%;
+  font-size: 3.5rem !important;
+  font-weight: 300 !important;
+  color: rgb(255, 255, 255) !important;
+  /* justify left */
+  text-align: left;
+}
+/* highlight orange */
+.orange {
+  background-color: #e4c31b;
+  animation: fade2 1.2s linear 1.2s forwards;
+  opacity: 0;
+}
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.m1 {
+  position: relative;
+  /*   top:-40px;
+    left:-200px; */
+  top: 20%;
+  left: -50%;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+.m2 {
+  position: relative;
+  top: 110px;
+  left: -90px;
+  transition: all 1.5s;
+  -webkit-transition: all 1.5s;
+}
+.m3 {
+  position: relative;
+  top: -170px;
+  left: -370px;
+  transition: all 1.5s;
+  -webkit-transition: all 1.5s;
+}
+.m4 {
+  position: relative;
+  position: relative;
+  top: -140px;
+  left: 600px;
+  transition: all 1.5s;
+  -webkit-transition: all 1.5s;
+}
+.m5 {
+  position: relative;
+  top: 240px;
+  left: 510px;
+  transition: all 1.5s;
+  -webkit-transition: all 1.5s;
+}
+.op1 {
+  opacity: 0;
+  animation: opacityDelay1;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-delay: 3.59s;
+}
+.op2 {
+  opacity: 0;
+  animation: opacityDelay1;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+  animation-delay: 3.7s;
+}
+.op3 {
+  opacity: 0;
+  animation: opacityDelay1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 3.8s;
+}
+.op4 {
+  opacity: 0;
+  animation: opacityDelay1;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+.op5 {
+  opacity: 0;
+  animation: opacityDelay1;
+  animation-duration: .75s;
+  animation-fill-mode: forwards;
+  animation-delay: 4.2s;
+}
+.op6 {
+  opacity: 0;
+  animation: opacityDelay1;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+  animation-delay: 4.1s;
+}
+.op7 {
+  opacity: 0;
+  animation: opacityDelay1;
+  animation-duration: .75s;
+  animation-fill-mode: forwards;
+  animation-delay: 3.74s;
+}
+.op8 {
+  opacity: 0;
+  animation: opacityDelay1;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 4.15s;
+}
+.op9 {
+  opacity: 0;
+  animation: opacityDelay1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 3.75s;
+}
+@keyframes opacityDelay1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.highlight {
+  animation-delay: 3s !important;
+  animation: highlightBlast 1.2s linear 1.2s forwards;
+  opacity: 0;
+}
+.animate-back {
+  animation-delay: 0.5s !important;
+  animation: animateback 1s forwards;
+}
+@keyframes animateback {
+  0% {
+  }
+  100% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
 .rotateIn {
   animation: rotateIn 0.5s;
 }
@@ -661,6 +955,74 @@ a:focus,
     transform: none;
     opacity: 1;
   }
+}
+/* digital explosion */
+.digital {
+  animation: explodeIn 0.5s;
+}
+@keyframes explodeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.wave {
+  opacity: 0;
+  animation-delay: 4s;
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 80% 80%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+.vl {
+  border-left: 2px solid #ffbb00;
+  height: 300px;
+  position: absolute;
+  top: 100;
+  animation: slideleftright 2s forwards 1s;
+  animation-delay: 3.2s;
+  opacity: 0;
+}
+@keyframes slideleftright {
+  0% {
+    left: 0;
+  }
+  30% {
+    opacity: 1;
+    left: 600px;
+  }
+  60% {
+    filter: blur(5px);
+    left: 0px;
+    top: 120px;
+  }
+  80% {
+    filter: blur(1px);
+    left: 780px;
+    top: 100px;
+  }
+  100% {
+    filter: blur(5px);
+    opacity: 0;
+    left: 50px;
+    top: 140px;
+  }
+  
+}
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg); opacity: 1; }
+   10% { transform: rotate(14.0deg); opacity: 1; }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg); opacity: 1; }
+   30% { transform: rotate(14.0deg); opacity: 1; }
+   40% { transform: rotate(-4.0deg); opacity: 1; }
+   50% { transform: rotate(10.0deg); opacity: 1; }
+   60% { transform: rotate( 0.0deg); opacity: 1; }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg); opacity: 1; }
 }
 .spin:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -731,6 +1093,7 @@ a:focus,
   width: 100%;
   height: 100%;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .circles li {
@@ -843,17 +1206,60 @@ a:focus,
 
 .aboutButton {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  top: 90%;
+  left: 45%;
+  color: rgb(32, 32, 32);
+  background-color: #dacc15;
+  font-size: 3.2rem;
+  font-weight: 400;
+  font-family: "Share Tech Mono", monospace;
+  z-index: 0 !important;
+  cursor: pointer !important;
+  border: 8px solid #a09827;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  animation: rotatehalf 2s infinite;
+}
+@keyframes rotatehalf {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    scale: 1.01;
+    transform: rotate(2deg);
+  }
+  50% {
+    scale: 1;
+    transform: rotate(0deg);
+  }
+  75% {
+    scale: 1.01;
+    transform: rotate(-2deg);
+  }
+  100% {
+    scale: 1;
+    transform: rotate(0deg);
+  }
+}
+.aboutButtonZ {
+  position: absolute;
+  top: 90%;
+  left: 46%;
+  z-index: 1 !important;
+  width: 100px;
+  height: 50px;
+}
+/* hover aboutBUtton */
+.aboutButtonZ:hover {
   cursor: pointer;
-  transition: 0.5s;
-  z-index: 0!important;
+}
+.aboutButtonRef {
+  position: absolute;
+  top: 85%;
+  left: 46%;
+  z-index: 1 !important;
+  width: 100px;
+  height: 50px;
 }
 /* Flashlight Overlay */
 
@@ -1081,7 +1487,7 @@ a:focus,
   z-index: 999;
   top: 89%;
   left: 20%;
-  filter: brightness(90%);
+  filter: brightness(80%) !important;
 }
 
 .responsive {
@@ -1836,7 +2242,8 @@ a:focus,
 }
 .previewImg {
   align-self: center;
-  max-height: 190px !important;
+  max-height: 200px !important;
+  max-width: 400px !important;
 }
 
 /* #testimonials i {
@@ -1971,6 +2378,7 @@ a:focus,
   cursor: crosshair !important;
   margin: auto;
   padding: 10px;
+  padding-bottom: 20px;
   width: 90%;
 }
 
@@ -2001,7 +2409,7 @@ a:focus,
 
 #testimonials h3 {
   font-size: 1em;
-  font-weight: 100;
+  font-weight: 200;
   color: white;
 }
 
@@ -2016,7 +2424,6 @@ a:focus,
 .testimonial-image {
   min-height: 240px;
 }
-
 
 @media screen and (max-width: 480px) {
   .testimonial-image {
