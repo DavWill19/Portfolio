@@ -237,7 +237,7 @@ export const About = (props) => {
       <div className='half4'>
         <div class="messageText">
           <Fade cascade delay={500} triggerOnce direction="right">
-            <h1>and everything in between</h1>
+            <h1>and everything in between...</h1>
           </Fade>
         </div>
       </div>
@@ -259,15 +259,31 @@ export const About = (props) => {
       <div>
         <div id="aboutButton" className='aboutButtonRef' />
         <div data-toggle="modal" data-target="#exampleModal2" className='aboutButtonZ' />
-        <button data-toggle="modal" data-target="#exampleModal2" className='aboutButton'>About</button>
+        <button data-toggle="modal" data-target="#exampleModal2" className='aboutButton'>Learn More</button>
       </div>
+    )
+  }
+  function Dots() {
+    return (
+      <>
+        <div className='dot' />
+        <div className='dot2' />
+        <div className='dot3' />
+        <div className='dot4' />
+        <div className='dot5' />
+        <div className='dot6' />
+        <div className='dot7' />
+        <div className='dot8' />
+        <div className='dot9' />
+      </>
     )
   }
 
   return (
     // modal
     <div id="about">
-      <div className="modal modal2 digital" id="exampleModal2" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+      {Dots()}
+      <div data-dismiss="modal" className="modal modal2 digital" id="exampleModal2" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal2-content text-center">
             <div className="modal2-header">
@@ -275,7 +291,7 @@ export const About = (props) => {
                 <img alt="icon" className="circuitGif" src={'../img/circuitGif.gif'} />
               </div>
               <div className="vl" />
-              <h3 className="modal2-title" id="exampleModalLabel2">
+              <h3 data-dismiss="modal" className="modal2-title" id="exampleModalLabel2">
                 <span className="m1 animate-back">A</span>
                 <span className="m2 animate-back">b</span>
                 <span className="m3 animate-back">o</span>
@@ -287,16 +303,15 @@ export const About = (props) => {
                 <hr className="aboutHr" />
               </h3>
             </div>
-
             <div className="modal2-body">
-              <p className="grow"><span class="wave">👋</span> Hi, I'm Dave. 
-                <span> </span><span className="op1 m1 animate-back">I enjoy creating digital experiences that exceed the </span><span className="op2 m2 animate-back">needs of clients and users. I have a </span><span className="op9 m4 animate-back">background in business and bring a deep</span> <span className="op2 m4 animate-back">commitment to delivering exceptional results, which is evident in my portfolio.
+              <p data-dismiss="modal" className="grow"><span class="wave">👋</span> Hi, I'm Dave.
+                <span> </span><span className="op1 m1 animate-back">I create digital experiences that exceed the </span><span className="op2 m2 animate-back">needs of clients and users. I have a </span><span className="op9 m4 animate-back">background in business and bring a </span> <span className="op2 m4 animate-back">commitment to delivering exceptional results, which is evident in my portfolio.
 
-                  I possess a </span><span className="op2 m3 animate-back">comprehensive understanding of a wide </span><span className="op3 m3 animate-back">range of web development technologies, including HTML</span>, CSS, JavaScript, Bootstrap, React, Node.js, Express, MongoDB, Electron.js, <span className="op4 m5 animate-back">React-Native, and more. I am skilled in using these technologies to create visually stunning <span className="op1 m1 animate-back">and highly functional websites and</span> applications.
+                  I possess a </span><span className="op2 m3 animate-back">comprehensive understanding of a wide </span><span className="op3 m3 animate-back">range of web development technologies, including</span> Bootstrap, React, Node.js, Express, MongoDB, Electron.js, <span className="op4 m5 animate-back">React-Native, and more. I am skilled in using these technologies to create<span className="op1 m1 animate-back"> highly functional websites and</span> applications.
 
                     I am confident in my ability to manage complex projects</span> from start to <span className="op9 m1 animate-back">finish and ensure that each </span><span className="op5 m5 animate-back">project meets the highest standards of quality. </span>
 
-                <span className="op6 m3 animate-back">I am actively seeking opportunities to grow my </span><span className="op7 m1 animate-back">skills and knowledge as a web developer, and to contribute my expertise to </span><span className="op8 m4 animate-back">organizations and projects that share my passion for excellence.</span>
+                <span className="op6 m3 animate-back">I am seeking opportunities to grow my </span><span className="op7 m1 animate-back">skills as a web developer, and to contribute my expertise to </span><span className="op8 m4 animate-back">organizations and projects that share my passion for excellence.</span>
 
 
 

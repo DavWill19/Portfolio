@@ -3,11 +3,11 @@ body {
   font-family: "Open Sans", sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
-  color: #777;
+  color: #000;
   font-weight: 400;
-  width: 100% !important;
-  height: 100% !important;
   cursor: crosshair;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .mt-5 {
@@ -31,7 +31,9 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 768px) {
   body,
   html {
-    overflow-x: hidden !important;
+    /* overflow-x: hidden;
+    width: 100vw!important;
+    margin: 0; */
   }
 }
 
@@ -119,9 +121,7 @@ hr {
 #menu {
   /* padding: 10px; */
   transition: all 0.8s;
-  overflow-x: hidden !important;
   cursor: crosshair;
-  overflow: hidden;
 }
 #menu h2 {
   font-size: 30px;
@@ -230,11 +230,11 @@ hr {
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #fff;
-  border-color: #608dfd;
+  background-color: #000000;
+  border-color: #4a4a4a;
 }
 .navbar-default .navbar-toggle:hover > .icon-bar {
-  background-color: #608dfd;
+  background-color: #7c796d;
 }
 .section-title {
   margin-bottom: 20px;
@@ -494,38 +494,55 @@ a:focus,
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
+  #header {
+    background-color: #000;
+    padding-bottom: 30px !important;
+  }
   #video {
-    padding-top: 20%;
-    padding-bottom: 10%;
+    height: 70%;
+    padding-top: 10%;
+    padding-bottom: 15%;
+    background-color: #000 !important;
   }
   .headerPhoto {
-    top: 32%;
-    width: 36vw;
+    top: 40%;
+    width: 45vw;
+    left: 5%;
   }
   #header h2 {
-    font-size: 6vw;
-    top: 42%;
-    left: 23%;
+    width: 100%;
+    font-size: 13vw;
+    top: 20%;
+    left: 56%;
   }
   #header h1 {
-    font-size: 6vw;
-    top: 50%;
-    left: 28%;
+    width: 80%;
+    font-size: 10.5vw;
+    top: 33.5%;
+    left: 59%;
   }
   #header .social {
     position: absolute;
     text-align: center;
-    top: 59.5%;
-    right: 50%;
+    top: 68.5%;
+    right: 5%;
+  }
+  #header .social i.fa {
+    font-size: 30px !important;
+    width: 43px !important;
+    height: 42px !important;
+    padding-top: 1.75px;
+    padding-left: 1px;
+    background-color: #fff;
+    border: 2px solid rgb(207, 183, 131);
+    color: rgb(49, 49, 49);
+    border-radius: 50%;
+    transition: all 0.3s;
+    box-shadow: 0 0 3 3 rgba(0, 0, 0, 0.5);
   }
   #header hr {
-    margin: 15 0 0 0;
-    position: absolute;
-    width: 190%;
-    height: 0.75px;
-    background: linear-gradient(to right, #f9cb4b 0%, #efecc9 100%) !important;
-    left: -200%;
+    display: none;
   }
   #header .social i.fa {
     font-size: 18px;
@@ -585,7 +602,7 @@ a:focus,
 }
 /* About Section */
 .modal-content {
-  height: 80%;
+  height: auto !important;
   padding-right: 2%;
   padding-left: 2%;
   padding-bottom: 2%;
@@ -644,7 +661,7 @@ a:focus,
   position: absolute;
   top: 50;
   left: 0;
-  width: 120%!important;
+  width: 120% !important;
   filter: sepia(100%) !important;
   animation: fade 2.1s linear 2.1s forwards !important;
   /* blur the border of the image */
@@ -713,6 +730,19 @@ a:focus,
   animation-delay: 1s !important;
 }
 
+@media screen and (max-width: 450px) {
+  .grow {
+    font-size: 1.5rem;
+    font-weight: 200;
+    opacity: 0;
+    animation: growFromCenter 2.9s forwards;
+    animation-delay: 1s !important;
+    background-color: rgb(0, 0, 0, 0.69);
+  }
+  .rotateIn {
+    animation: none !important;
+  }
+}
 @keyframes slideInFromLeft {
   0% {
     transform: translateY(100%);
@@ -759,16 +789,15 @@ a:focus,
   background-color: transparent;
 }
 .modal-backdrop {
-  background-color: rgb(0, 0, 0, 0.99)!important;
+  background-color: rgb(0, 0, 0, 0.99) !important;
 }
 .modal2-content {
   margin-top: 10%;
   border-radius: 10px;
   overflow: hidden !important;
   max-height: fit-content;
-  background-color: rgb(0, 0, 0, 0.39);
-  padding: 10,10,10,10!important;
-
+  background-color: rgb(0, 0, 0, 0.89) !important;
+  padding: 10, 10, 10, 10 !important;
 }
 
 .modal2-body {
@@ -847,14 +876,14 @@ a:focus,
 .op1 {
   opacity: 0;
   animation: opacityDelay1;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-delay: 3.59s;
 }
 .op2 {
   opacity: 0;
   animation: opacityDelay1;
-  animation-duration: .25s;
+  animation-duration: 0.25s;
   animation-fill-mode: forwards;
   animation-delay: 3.7s;
 }
@@ -868,28 +897,28 @@ a:focus,
 .op4 {
   opacity: 0;
   animation: opacityDelay1;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-delay: 4s;
 }
 .op5 {
   opacity: 0;
   animation: opacityDelay1;
-  animation-duration: .75s;
+  animation-duration: 0.75s;
   animation-fill-mode: forwards;
   animation-delay: 4.2s;
 }
 .op6 {
   opacity: 0;
   animation: opacityDelay1;
-  animation-duration: .25s;
+  animation-duration: 0.25s;
   animation-fill-mode: forwards;
   animation-delay: 4.1s;
 }
 .op7 {
   opacity: 0;
   animation: opacityDelay1;
-  animation-duration: .75s;
+  animation-duration: 0.75s;
   animation-fill-mode: forwards;
   animation-delay: 3.74s;
 }
@@ -973,10 +1002,10 @@ a:focus,
 .wave {
   opacity: 0;
   animation-delay: 4s;
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 80% 80%;       /* Pivot around the bottom-left palm */
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 80% 80%; /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 .vl {
@@ -1012,17 +1041,40 @@ a:focus,
     left: 50px;
     top: 140px;
   }
-  
 }
 @keyframes wave-animation {
-    0% { transform: rotate( 0.0deg); opacity: 1; }
-   10% { transform: rotate(14.0deg); opacity: 1; }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg); opacity: 1; }
-   30% { transform: rotate(14.0deg); opacity: 1; }
-   40% { transform: rotate(-4.0deg); opacity: 1; }
-   50% { transform: rotate(10.0deg); opacity: 1; }
-   60% { transform: rotate( 0.0deg); opacity: 1; }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg); opacity: 1; }
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  10% {
+    transform: rotate(14deg);
+    opacity: 1;
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+    opacity: 1;
+  }
+  30% {
+    transform: rotate(14deg);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(-4deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(10deg);
+    opacity: 1;
+  }
+  60% {
+    transform: rotate(0deg);
+    opacity: 1;
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
 }
 .spin:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -1261,6 +1313,135 @@ a:focus,
   width: 100px;
   height: 50px;
 }
+
+@media screen and (max-width: 450px) {
+  .aboutButton {
+    position: absolute;
+    top: 95%;
+    left: 29.5%;
+    color: rgb(32, 32, 32);
+    background: linear-gradient(
+      45deg,
+      rgba(236, 190, 26, 0.9),
+      rgba(217, 183, 30, 0.8)
+    );
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: "Share Tech Mono", monospace;
+    z-index: 5 !important;
+    cursor: pointer !important;
+    border: 2px solid #a28023;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    animation: rotatehalf 2s infinite;
+  }
+  #about {
+    position: relative;
+    background-image: none;
+    background-color: #000;
+    cursor: crosshair;
+    margin-bottom: -10px;
+  }
+  .mobileImg {
+    opacity: 0;
+  }
+  @keyframes rotatehalf {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      scale: 1.01;
+      transform: rotate(2deg);
+    }
+    50% {
+      scale: 1;
+      transform: rotate(0deg);
+    }
+    75% {
+      scale: 1.01;
+      transform: rotate(-2deg);
+    }
+    100% {
+      scale: 1;
+      transform: rotate(0deg);
+    }
+  }
+  .aboutButtonZ {
+    position: absolute;
+    top: 90%;
+    left: 46%;
+    z-index: 5 !important;
+    width: 100px;
+    height: 50px;
+  }
+  .dot {
+    position: absolute;
+    top: 46%;
+    left: 28.5%;
+    height: 2px;
+    width: 6px;
+    transform: rotate(45deg);
+    background-color: #706332;
+    border-radius: 20%;
+    z-index: 999999999;
+  }
+  .dot2 {
+    position: absolute;
+    top: 18%;
+    left: 67%;
+    height: 2px;
+    width: 6px;
+    transform: rotate(135deg);
+    background-color: #706332;
+    border-radius: 20%;
+    z-index: 999999999;
+  }
+  .dot3 {
+    position: absolute;
+    top: 24%;
+    left: 36%;
+    height: 2px;
+    width: 6px;
+    transform: rotate(135deg);
+    background-color: #706332;
+    border-radius: 20%;
+    z-index: 999999999;
+  }
+  .dot4 {
+    position: absolute;
+    top: 56%;
+    left: 72%;
+    height: 2px;
+    width: 6px;
+    transform: rotate(45deg);
+    background-color: #706332;
+    border-radius: 20%;
+    z-index: 999999999;
+  }
+  .dot5 {
+    position: absolute;
+    top: 80%;
+    left: 65%;
+    height: 2px;
+    width: 6px;
+    transform: rotate(135deg);
+    background-color: #706332;
+    border-radius: 20%;
+    z-index: 999999999;
+  }
+  .dot6 {
+    position: absolute;
+    top: 88%;
+    left: 17%;
+    height: 2px;
+    width: 6px;
+    transform: rotate(135deg);
+    background-color: #706332;
+    border-radius: 20%;
+    z-index: 999999999;
+  }
+}
+
 /* Flashlight Overlay */
 
 :root:before {
@@ -1818,7 +1999,7 @@ a:focus,
     height: auto;
     z-index: 999;
     top: 73%;
-    left: 42%;
+    left: 2%;
   }
   .responsive {
     width: 50% !important;
@@ -1893,9 +2074,23 @@ a:focus,
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
+  #testimonials {
+    padding-top: 20px;
+  }
+  #testimonials .container::before {
+    position: relative;
+    content: "";
+    background: #e4cc61;
+    height: 2px;
+    width: 60px;
+    top: 58;
+    left: 0px;
+  }
   #testimonials h2 {
-    font-size: 6vw !important;
+    font-size: 9vw !important;
+    float: left !important;
+    border-bottom: none !important;
   }
   .desktopImg {
     display: none;
@@ -1908,34 +2103,45 @@ a:focus,
     margin-bottom: -50px;
   }
   #about a {
-    font-size: 3.5vw;
+    font-size: 4.5vw;
     z-index: 99999999999;
-    font-weight: 300;
+    padding: 6px;
+    border: 2px solid #d4d4d4;
   }
   .contactButton {
     position: absolute;
     height: auto;
     z-index: 999;
-    margin-top: 7%;
+    top: 13%;
+    left: 64%;
   }
   .scrolling-words-container {
-    margin-top: -80px !important;
-    width: 100% !important;
+    margin-top: -130px !important;
+    width: 120% !important;
+    max-height: 50px;
+    overflow-y: hidden;
+    margin-left: -9%;
   }
   .scrolling-words-box {
     height: 0px;
     width: 100% !important;
   }
   #about h2 {
-    font-size: 6.2vw;
+    font-size: 7.5vw;
     z-index: 99999999999;
     font-weight: 300;
   }
   #about h1 {
-    font-size: 4.5vw;
+    font-size: 6.5vw;
     z-index: 99999999999;
     font-weight: 300;
+    margin-top: -40px;
   }
+  .typewriter {
+    width: 152%;
+    margin-left: -38%;
+  }
+
   .about {
     height: 100px !important;
   }
@@ -1951,84 +2157,84 @@ a:focus,
     position: absolute;
     height: auto;
     z-index: 999;
-    margin-right: 4%;
-    margin-top: 7%;
+    margin-right: 5%;
+    margin-top: -20%;
   }
   .half {
     width: 12%;
     position: absolute;
     z-index: 999;
-    margin-top: 3%;
+    margin-top: -10%;
   }
   .htmlImg {
-    position: absolute;
-    width: 18%;
-    height: auto;
-    z-index: 999;
-    top: 16%;
-    left: 61.5%;
-  }
-  .cssImg {
-    position: absolute;
-    width: 15%;
-    height: auto;
-    z-index: 999;
-    top: 16%;
-    left: 42%;
-  }
-  .jsImg {
-    position: absolute;
-    width: 17%;
-    height: auto;
-    z-index: 999;
-    top: 16%;
-    left: 20%;
-  }
-  .bsImg {
-    position: absolute;
-    width: 15%;
-    height: auto;
-    z-index: 999;
-    top: 38%;
-    left: 14%;
-  }
-  .reactImg {
-    position: absolute;
-    width: 27%;
-    height: auto;
-    z-index: 999;
-    top: 44.5%;
-    left: 42%;
-  }
-  .electronImg {
-    position: absolute;
-    width: 17%;
-    height: auto;
-    z-index: 999;
-    top: 40%;
-    left: 74%;
-  }
-  .nodeJsImg {
     position: absolute;
     width: 25%;
     height: auto;
     z-index: 999;
-    top: 54%;
-    left: 39.5%;
+    top: 10%;
+    left: 69.5%;
+  }
+  .cssImg {
+    position: absolute;
+    width: 22%;
+    height: auto;
+    z-index: 999;
+    top: 15%;
+    left: 40%;
+  }
+  .jsImg {
+    position: absolute;
+    width: 23%;
+    height: auto;
+    z-index: 999;
+    top: 22%;
+    left: 14%;
+  }
+  .bsImg {
+    position: absolute;
+    width: 22%;
+    height: auto;
+    z-index: 999;
+    top: 35%;
+    left: 14%;
+  }
+  .reactImg {
+    position: absolute;
+    width: 60%;
+    height: auto;
+    z-index: 999;
+    top: 50.5%;
+    left: 34.5%;
+  }
+  .electronImg {
+    position: absolute;
+    width: 25%;
+    height: auto;
+    z-index: 999;
+    top: 53%;
+    left: 72%;
+  }
+  .nodeJsImg {
+    position: absolute;
+    width: 35%;
+    height: auto;
+    z-index: 999;
+    top: 63%;
+    left: 60.5%;
   }
   .mongoDbImg {
     position: absolute;
-    width: 27%;
+    width: 35%;
     height: auto;
     z-index: 999;
-    top: 76%;
-    left: 38.5%;
+    top: 75%;
+    left: 25.5%;
   }
   .responsive {
-    width: 58% !important;
+    width: 79% !important;
     position: absolute;
     top: 28.5%;
-    left: 42%;
+    left: 24%;
     z-index: 1 !important;
   }
 
@@ -2038,12 +2244,12 @@ a:focus,
   }
 
   .responsive3 {
-    width: 47% !important;
+    width: 74% !important;
     position: absolute;
-    top: 48%;
+    top: 57%;
     left: 2%;
     z-index: 1 !important;
-    filter: brightness(20%);
+    filter: brightness(15%);
   }
   .greet {
     width: 40%;
@@ -2057,18 +2263,18 @@ a:focus,
   }
 
   .half {
-    width: 47%;
+    width: 45.25%;
     position: absolute;
     z-index: 999;
     top: 7.5%;
-    margin-left: 38.5%;
+    margin-left: 40.5%;
   }
 
   .half2 {
     width: 100%;
     padding: 0 10px;
     position: absolute;
-    top: 32%;
+    top: 37%;
     left: 3%;
     z-index: 999;
     float: left;
@@ -2076,11 +2282,11 @@ a:focus,
   }
 
   .half3 {
-    width: 100%;
+    width: 150%;
     padding: 0 10px;
     position: absolute;
-    top: 52%;
-    left: 28%;
+    top: 68%;
+    left: 8%;
     z-index: 999;
     float: left;
     flex-wrap: wrap;
@@ -2089,14 +2295,18 @@ a:focus,
     width: 100%;
     padding: 0 10px;
     position: absolute;
-    top: 72%;
-    left: 26%;
+    top: 93%;
+    left: 2%;
     z-index: 999;
     float: left;
     flex-wrap: wrap;
   }
   #contact h2 {
+    font-size: 9vw !important;
+  }
+  .messageText h1 {
     font-size: 6vw !important;
+    color: #c4c4c4;
   }
 }
 /* Services Section */
@@ -2242,8 +2452,9 @@ a:focus,
 }
 .previewImg {
   align-self: center;
-  max-height: 200px !important;
-  max-width: 400px !important;
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 380px;
 }
 
 /* #testimonials i {
@@ -2395,15 +2606,25 @@ a:focus,
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
   .dashed {
-    padding-top: 20px;
-    border: dashed 1px rgb(167, 143, 94);
+    padding-top: 10px;
+    border: none;
     border-radius: 10px;
     cursor: crosshair !important;
     margin: auto;
-    padding: 10px;
     width: 90%;
+  }
+  .testimonial-image {
+    min-height: 160px;
+    max-height: 190px;
+    border-radius: 10px;
+  }
+  .previewImg {
+    align-self: center;
+    min-height: 100px;
+    max-height: 162px;
+    max-width: 380px;
   }
 }
 
@@ -2413,22 +2634,12 @@ a:focus,
   color: white;
 }
 
-.smallLogo {
-  width: 120px;
-  height: auto;
-}
 .smallLogo:hover {
   transform: scale(1.05);
   transition: all 0.3s;
 }
 .testimonial-image {
   min-height: 240px;
-}
-
-@media screen and (max-width: 480px) {
-  .testimonial-image {
-    min-height: 150px;
-  }
 }
 
 .testimonial-image:hover h3 {
@@ -2816,12 +3027,12 @@ a:focus,
   color: white;
 }
 .testimonial-image {
-  padding: 10px !important;
+  padding: 10px;
   max-height: 190px;
   border-radius: 10px;
 }
 .smallLogo {
-  width: 120px;
+  width: 130px;
   height: auto;
 }
 .smallLogo:hover {

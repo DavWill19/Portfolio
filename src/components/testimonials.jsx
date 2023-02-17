@@ -1,7 +1,7 @@
 import { Fade, Flip } from 'react-awesome-reveal';
 import React from 'react';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 export const Testimonials = (props) => {
   const [image, setImage] = React.useState('');
   const [title, setTitle] = React.useState('');
@@ -11,17 +11,55 @@ export const Testimonials = (props) => {
   const [desktop, setDesktop] = React.useState('');
   const [type, setType] = React.useState('');
 
+// check if element is on screen
+  const ref = useRef();
+  const useOnScreen = (ref, rootMargin = "-40%") => {
+    const [isVisible, setIsVisible] = React.useState(false);
+
+    
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsVisible(entry.isIntersecting);
+        },
+        {
+          rootMargin,
+        }
+      );
+  
+      const currentElement = ref?.current;
+  
+      if (currentElement) {
+        observer.observe(currentElement);
+      }
+  
+      return () => {
+        observer.unobserve(currentElement);
+      };
+    }, []);
+  
+    return isVisible;
+    
+  };
+
+  if (useOnScreen(ref)) {
+    ref.current.style.filter = 'grayscale(10%)';
+  }
+
+
+
   function appStore() {
     if (type === 'phone') {
       // document.querySelector('.modal-content').style.height = '70%';
       return (
         <div className='row mt-3'>
-          <div className='col-xs-3 col-xs-offset-3'>
+          <div className='col-xs-6'>
             <a href="https://apps.apple.com/us/app/crew-coin/id1611964163" target='_blank' rel='noreferrer'>
               <img className='smallLogo' src="./img/appStore.png" alt={type} />
             </a>
           </div>
-          <div className='col-xs-3'>
+          <div className='col-xs-6'>
             <a href="https://play.google.com/store/apps/details?id=com.davwill19.crewcoin" target='_blank' rel='noreferrer'>
               <img className='smallLogo' src="./img/playStore.png" alt={type} />
             </a>
@@ -93,19 +131,19 @@ export const Testimonials = (props) => {
 
       <div className=' dashed row'>
         <Fade triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-6 noPad noPad'>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad noPad'>
             <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
+              <img  data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/crewcoinweb');
                 setImage('./img/crewcoinPreview.png'); setTitle('Crew Coin Web Preview'); setUrl(`https://www.crewcoin.app/`); setText('www.crewcoin.app');
               }}
-                className='previewImg' src={'../img/crewcoinPreviewSmall.png'} alt='testimonial' />
+              className='previewImg' src={'../img/crewcoinPreviewSmall.png'} alt='testimonial' />
               <h3 className='text-center'>Crew Coin - Web</h3>
             </div>
           </div>
         </Fade>
         <Fade delay={500} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType('phone'); setDesktop(''); setgitUrl('https://github.com/DavWill19/crewcoin');
@@ -117,7 +155,7 @@ export const Testimonials = (props) => {
           </div>
         </Fade>
         <Fade delay={100} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/chiplocked');
@@ -129,7 +167,7 @@ export const Testimonials = (props) => {
           </div>
         </Fade>
         <Fade delay={200} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/Wenventure');
@@ -141,7 +179,7 @@ export const Testimonials = (props) => {
           </div>
         </Fade>
         <Fade delay={300} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/PaddleApp');
@@ -153,7 +191,7 @@ export const Testimonials = (props) => {
           </div>
         </Fade>
         <Fade delay={400} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/foxlandscaping');
@@ -165,35 +203,8 @@ export const Testimonials = (props) => {
           </div>
         </Fade>
 
-        <Fade delay={600} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType('desktop'); setgitUrl('https://github.com/DavWill19/borrowloan');
-                setDesktop('Borrow and Loan Inventory Control App / Electron');
-                setImage('./img/borrowVid.gif'); setTitle('Inventory Control Preview'); setUrl(`#testimonials`); setText('');
-              }}
-                className='previewImg' src={'../img/borrowLoan.png'} alt='testimonial' />
-              <h3 className='text-center'>Inventory Control Desktop App</h3>
-            </div>
-          </div>
-        </Fade>
-
-        <Fade delay={700} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType('desktop');
-                setDesktop('Employee Performance Tracking App / Electron');
-                setImage('./img/reviewVid.gif'); setTitle('Review Scheduling App Preview'); setUrl(`#testimonials`); setText('');
-              }}
-                className='previewImg' src={'../img/reviewScheduler.png'} alt='testimonial' />
-              <h3 className='text-center'>Employee Review Desktop App</h3>
-            </div>
-          </div>
-        </Fade>
         <Fade delay={800} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-6 noPad'>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType('desktop'); setgitUrl('https://github.com/DavWill19/moralesurveyreact');
@@ -202,6 +213,32 @@ export const Testimonials = (props) => {
               }}
                 className='previewImg' src={'../img/morale.png'} alt='testimonial' />
               <h3 className='text-center'>Employee Morale Survey Web</h3>
+            </div>
+          </div>
+        </Fade>
+        <Fade delay={600} triggerOnce cascade>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+            <div className='testimonial-image'>
+              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
+                setType('desktop'); setgitUrl('https://github.com/DavWill19/borrowloan');
+                setDesktop('Borrow and Loan Inventory Control App / Electron');
+                setImage('./img/borrowVid.gif'); setTitle('Inventory Control Preview'); setUrl(`#testimonials`); setText('');
+              }}
+                className='previewImg' src={'../img/borrowLoan.png'} alt='testimonial' />
+              <h3 className='text-center'>Inventory Desktop Control App</h3>
+            </div>
+          </div>
+        </Fade>
+        <Fade delay={700} triggerOnce cascade>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+            <div className='testimonial-image'>
+              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
+                setType('desktop');
+                setDesktop('Employee Performance Tracking App / Electron');
+                setImage('./img/reviewVid.gif'); setTitle('Review Scheduling App Preview'); setUrl(`#testimonials`); setText('');
+              }}
+                className='previewImg' src={'../img/reviewScheduler.png'} alt='testimonial' />
+              <h3 className='text-center'>Employee Review Desktop App</h3>
             </div>
           </div>
         </Fade>

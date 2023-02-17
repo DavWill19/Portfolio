@@ -50,7 +50,7 @@ export const Contact = (props) => {
             <div className='row'>
               <div className='section-title'>
                 <Fade triggerOnce direction='left'>
-                  <h2>Get in touch</h2>
+                  <h2>Contact</h2>
                 </Fade>
                 <Fade direction='left' delay={100} triggerOnce>
                   <p>
