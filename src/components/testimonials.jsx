@@ -74,7 +74,7 @@ export const Testimonials = (props) => {
 
   return (
     <div id='testimonials'>
-      <div className="modal fade rotateIn" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal rotateIn" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <p data-dismis="modal" className='red' aria-label="Close"> <span className='red' aria-hidden="true">&times;</span></p>
         <div className="modal-dialog" role="document">
           <div className="modal-content text-center">
@@ -166,6 +166,45 @@ export const Testimonials = (props) => {
             </div>
           </div>
         </Fade>
+        <Fade delay={600} triggerOnce cascade>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+            <div className='testimonial-image'>
+              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
+                setType('desktop'); setgitUrl('https://github.com/DavWill19/borrowloan');
+                setDesktop('Borrow and Loan Inventory Control App / Electron');
+                setImage('./img/borrowVid.gif'); setTitle('Inventory Control Preview'); setUrl(`#testimonials`); setText('');
+              }}
+                className='previewImg' src={'../img/borrowLoan.png'} alt='testimonial' />
+              <h3 className='text-center'>Inventory Desktop Control App</h3>
+            </div>
+          </div>
+        </Fade>
+        <Fade delay={700} triggerOnce cascade>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+            <div className='testimonial-image'>
+              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
+                setType('desktop');
+                setDesktop('Employee Performance Tracking App / Electron');
+                setImage('./img/reviewVid.gif'); setTitle('Review Scheduling App Preview'); setUrl(`#testimonials`); setText('');
+              }}
+                className='previewImg' src={'../img/reviewScheduler.png'} alt='testimonial' />
+              <h3 className='text-center'>Employee Review Desktop App</h3>
+            </div>
+          </div>
+        </Fade>
+        <Fade delay={800} triggerOnce cascade>
+          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+            <div className='testimonial-image'>
+              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
+                setType('desktop'); setgitUrl('https://github.com/DavWill19/moralesurveyreact');
+                setDesktop('Employee Morale Tracking App');
+                setImage('./img/morale.png'); setTitle('Employee Morale App Preview'); setUrl(`#testimonials`); setText('');
+              }}
+                className='previewImg' src={'../img/morale.png'} alt='testimonial' />
+              <h3 className='text-center'>Employee Morale Survey Web</h3>
+            </div>
+          </div>
+        </Fade>
         <Fade delay={200} triggerOnce cascade>
           <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
             <div className='testimonial-image'>
@@ -191,7 +230,7 @@ export const Testimonials = (props) => {
           </div>
         </Fade>
         <Fade delay={400} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+          <div className=' d-none d-lg-block col-md-4 noPad'>
             <div className='testimonial-image'>
               <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/foxlandscaping');
@@ -199,46 +238,6 @@ export const Testimonials = (props) => {
               }}
                 className='previewImg' src={'../img/foxPreviewSmall.png'} alt='testimonial' />
               <h3 className='text-center'>Fox Landscaping Web</h3>
-            </div>
-          </div>
-        </Fade>
-
-        <Fade delay={800} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType('desktop'); setgitUrl('https://github.com/DavWill19/moralesurveyreact');
-                setDesktop('Employee Morale Tracking App');
-                setImage('./img/morale.png'); setTitle('Employee Morale App Preview'); setUrl(`#testimonials`); setText('');
-              }}
-                className='previewImg' src={'../img/morale.png'} alt='testimonial' />
-              <h3 className='text-center'>Employee Morale Survey Web</h3>
-            </div>
-          </div>
-        </Fade>
-        <Fade delay={600} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType('desktop'); setgitUrl('https://github.com/DavWill19/borrowloan');
-                setDesktop('Borrow and Loan Inventory Control App / Electron');
-                setImage('./img/borrowVid.gif'); setTitle('Inventory Control Preview'); setUrl(`#testimonials`); setText('');
-              }}
-                className='previewImg' src={'../img/borrowLoan.png'} alt='testimonial' />
-              <h3 className='text-center'>Inventory Desktop Control App</h3>
-            </div>
-          </div>
-        </Fade>
-        <Fade delay={700} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType('desktop');
-                setDesktop('Employee Performance Tracking App / Electron');
-                setImage('./img/reviewVid.gif'); setTitle('Review Scheduling App Preview'); setUrl(`#testimonials`); setText('');
-              }}
-                className='previewImg' src={'../img/reviewScheduler.png'} alt='testimonial' />
-              <h3 className='text-center'>Employee Review Desktop App</h3>
             </div>
           </div>
         </Fade>

@@ -159,6 +159,15 @@ export const About = (props) => {
       </div>
     )
   }
+  function Git() {
+    return (
+      <div className='gitImg'>
+        <Fade triggerOnce cascade direction="left">
+          <img className="pulse spin" alt="icon" src={'../img/gitIcon.png'} />
+        </Fade>
+      </div>
+    )
+  }
 
   function Message1() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -341,6 +350,7 @@ export const About = (props) => {
       <Electron />
       <NodeJs />
       <MongoDb />
+      <Git />
       {/* <DevImage /> */}
       <img alt="about" className="desktopImg" src={'../img/about.png'} />
       <img alt="about" className="mobileImg" src={'../img/aboutMobile.png'} />

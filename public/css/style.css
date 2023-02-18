@@ -28,14 +28,14 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgb(70, 70, 70);
   background-color: #171717;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   body,
   html {
-    /* overflow-x: hidden;
+    overflow-x: hidden;
     width: 100vw!important;
-    margin: 0; */
+    margin: 0;
   }
-}
+} */
 
 h2,
 h3,
@@ -200,9 +200,9 @@ hr {
   content: "";
   transition: width 0.2s;
 }
-/* #menu.navbar-default .navbar-nav > li > a:hover:after {
+#menu.navbar-default .navbar-nav > li > a:hover:after {
   width: 100%;
-} */
+}
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -500,32 +500,33 @@ a:focus,
     padding-bottom: 30px !important;
   }
   #video {
-    height: 70%;
+    height: 110%;
     padding-top: 10%;
     padding-bottom: 15%;
     background-color: #000 !important;
+    z-index: 9999999;
   }
   .headerPhoto {
-    top: 40%;
-    width: 45vw;
+    top: 34%;
+    width: 58vw;
     left: 5%;
   }
   #header h2 {
     width: 100%;
-    font-size: 13vw;
-    top: 20%;
-    left: 56%;
+    font-size: 14vw;
+    top: 17%;
+    left: 54%;
   }
   #header h1 {
-    width: 80%;
-    font-size: 10.5vw;
-    top: 33.5%;
-    left: 59%;
+    width: 95%;
+    font-size: 12vw;
+    top: 26.5%;
+    left: 53%;
   }
   #header .social {
     position: absolute;
     text-align: center;
-    top: 68.5%;
+    top: 71.5%;
     right: 5%;
   }
   #header .social i.fa {
@@ -540,9 +541,6 @@ a:focus,
     border-radius: 50%;
     transition: all 0.3s;
     box-shadow: 0 0 3 3 rgba(0, 0, 0, 0.5);
-  }
-  #header hr {
-    display: none;
   }
   #header .social i.fa {
     font-size: 18px;
@@ -601,8 +599,11 @@ a:focus,
   margin-bottom: 20px;
 }
 /* About Section */
+.modal {
+  overflow-y: hidden!important;
+}
 .modal-content {
-  height: auto !important;
+  height: auto;
   padding-right: 2%;
   padding-left: 2%;
   padding-bottom: 2%;
@@ -1259,7 +1260,7 @@ a:focus,
 .aboutButton {
   position: absolute;
   top: 90%;
-  left: 45%;
+  left: 35%;
   color: rgb(32, 32, 32);
   background-color: #dacc15;
   font-size: 3.2rem;
@@ -1271,6 +1272,15 @@ a:focus,
   border-radius: 2px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   animation: rotatehalf 2s infinite;
+}
+@media screen and (max-width: 768px) {
+  .aboutButton {
+    z-index: 999999!important;
+    position: absolute;
+    top: 90%;
+    left: 35%;
+  }
+  
 }
 @keyframes rotatehalf {
   0% {
@@ -1296,10 +1306,10 @@ a:focus,
 .aboutButtonZ {
   position: absolute;
   top: 90%;
-  left: 46%;
+  left: 36%;
   z-index: 1 !important;
-  width: 100px;
-  height: 50px;
+  width: 200px;
+  height: 80px;
 }
 /* hover aboutBUtton */
 .aboutButtonZ:hover {
@@ -1308,17 +1318,17 @@ a:focus,
 .aboutButtonRef {
   position: absolute;
   top: 85%;
-  left: 46%;
+  left: 36%;
   z-index: 1 !important;
-  width: 100px;
-  height: 50px;
+  width: 200px;
+  height: 80px;
 }
 
 @media screen and (max-width: 450px) {
   .aboutButton {
     position: absolute;
     top: 95%;
-    left: 29.5%;
+    left: 27.5%;
     color: rgb(32, 32, 32);
     background: linear-gradient(
       45deg,
@@ -1420,8 +1430,8 @@ a:focus,
   }
   .dot5 {
     position: absolute;
-    top: 80%;
-    left: 65%;
+    top: 78%;
+    left: 66.5%;
     height: 2px;
     width: 6px;
     transform: rotate(135deg);
@@ -1431,8 +1441,8 @@ a:focus,
   }
   .dot6 {
     position: absolute;
-    top: 88%;
-    left: 17%;
+    top: 85%;
+    left: 36%;
     height: 2px;
     width: 6px;
     transform: rotate(135deg);
@@ -1645,13 +1655,8 @@ a:focus,
   top: 55%;
   left: 41.5%;
 }
-.mongoDbImg {
-  position: absolute;
-  width: 15%;
-  height: auto;
-  z-index: 999;
-  top: 77%;
-  left: 43%;
+.gitImg {
+  display: none;
 }
 .mongoDbImg {
   position: absolute;
@@ -1999,7 +2004,7 @@ a:focus,
     height: auto;
     z-index: 999;
     top: 73%;
-    left: 2%;
+    left: 42%;
   }
   .responsive {
     width: 50% !important;
@@ -2216,19 +2221,28 @@ a:focus,
   }
   .nodeJsImg {
     position: absolute;
-    width: 35%;
+    width: 33%;
     height: auto;
     z-index: 999;
-    top: 63%;
-    left: 60.5%;
+    top: 62%;
+    left: 65.5%;
   }
   .mongoDbImg {
     position: absolute;
-    width: 35%;
+    width: 32%;
     height: auto;
     z-index: 999;
-    top: 75%;
-    left: 25.5%;
+    top: 80.5%;
+    left: 8.5%;
+  }
+  .gitImg {
+    display: block;
+    position: absolute;
+    width: 31%;
+    height: auto;
+    z-index: 999;
+    top: 74%;
+    left: 39%;
   }
   .responsive {
     width: 79% !important;
@@ -2292,14 +2306,7 @@ a:focus,
     flex-wrap: wrap;
   }
   .half4 {
-    width: 100%;
-    padding: 0 10px;
-    position: absolute;
-    top: 93%;
-    left: 2%;
-    z-index: 999;
-    float: left;
-    flex-wrap: wrap;
+    display: none;
   }
   #contact h2 {
     font-size: 9vw !important;
