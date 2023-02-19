@@ -1,7 +1,6 @@
-import { Fade, Flip } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 import React from 'react';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useRef } from 'react';
+
 export const Testimonials = (props) => {
   const [image, setImage] = React.useState('');
   const [title, setTitle] = React.useState('');
@@ -10,43 +9,6 @@ export const Testimonials = (props) => {
   const [gitUrl, setgitUrl] = React.useState('');
   const [desktop, setDesktop] = React.useState('');
   const [type, setType] = React.useState('');
-
-// check if element is on screen
-  const ref = useRef();
-  const useOnScreen = (ref, rootMargin = "-40%") => {
-    const [isVisible, setIsVisible] = React.useState(false);
-
-    
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          setIsVisible(entry.isIntersecting);
-        },
-        {
-          rootMargin,
-        }
-      );
-  
-      const currentElement = ref?.current;
-  
-      if (currentElement) {
-        observer.observe(currentElement);
-      }
-  
-      return () => {
-        observer.unobserve(currentElement);
-      };
-    }, []);
-  
-    return isVisible;
-    
-  };
-
-  if (useOnScreen(ref)) {
-    ref.current.style.filter = 'grayscale(10%)';
-  }
-
 
 
   function appStore() {
