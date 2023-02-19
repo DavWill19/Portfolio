@@ -1,6 +1,32 @@
 import { Link } from "react-router-dom";
+import React from "react";
 
 export const Navigation = () => {
+  const [toggle, setToggle] = React.useState({});
+  const [data, setData] = React.useState({});
+
+  React.useEffect(() => {
+    if (window.innerWidth < 768) {
+      setToggle('collapse');
+      setData('#bs-example-navbar-collapse-1')
+    }
+    else {
+      setToggle('');
+      setData('')
+    }
+  } , [])
+
+  function checkForWindowResize() {
+    if (window.innerWidth < 768) {
+      setToggle('collapse');
+      setData('#bs-example-navbar-collapse-1')
+    }
+    else {
+      setToggle('');
+      setData('')
+    }
+}
+window.addEventListener('resize', checkForWindowResize);
   return (
     <nav id='menu' className='navbar  navbar-default navbar-fixed-top'>
       <div className='container'>
@@ -32,11 +58,11 @@ export const Navigation = () => {
           className='collapse navbar-collapse'
           id='bs-example-navbar-collapse-1'
         >
-          <ul className='nav navbar-nav navbar-right'>
+          <ul data-toggle={toggle} data-target={data} className='nav navbar-nav navbar-right'>
             <li className="bord">
             <div className="spinner"></div>
               <a href='#about' className='page-scroll go'>
-                Tech
+                Tech Stack
               </a>
             </li>
             <li className="bord">

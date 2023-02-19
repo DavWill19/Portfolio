@@ -9,7 +9,7 @@ export const Header = (props) => {
         <div className='headerOverlay' />
         <div
           dangerouslySetInnerHTML={{
-            __html: `<video id="video" autoPlay loop muted>
+            __html: `<video id="video" playsinline autoPlay controls="true" loop muted>
           <source src='./img/portfoliocode.mp4' type='video/mp4' />
         </video>`,
           }}

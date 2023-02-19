@@ -3,10 +3,11 @@ body {
   font-family: "Open Sans", sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
-  color: #000;
+  color: #777;
   font-weight: 400;
+  width: 100%;
+  height: 100%;
   cursor: crosshair;
-  margin: 0;
 }
 
 .mt-5 {
@@ -28,8 +29,12 @@ body::-webkit-scrollbar-thumb {
   background-color: #171717;
 }
 @media screen and (max-width: 768px) {
-  body, html {
-    overflow-x: hidden !important;
+  body,
+  html {
+    width: auto;
+    height: auto;
+    overflow-x: hidden;
+    width: 100vw!important;
   }
 }
 
@@ -133,22 +138,6 @@ hr {
   margin-bottom: -20px;
 }
 
-@media screen and (max-width: 768px) {
-  #menu h2 {
-    font-size: 25px;
-    font-weight: 200;
-    background: linear-gradient(to right, #ffffff 0%, #a9a8a3 100%);
-    margin-bottom: 20px;
-    /* Set the background color */
-    /* Mask the color to the text, and remove the rest  */
-    -webkit-background-clip: text;
-    /* Make the text fill color value transparent so the masked background color comes through */
-    -webkit-text-fill-color: transparent;
-    margin-top: -10px;
-    margin-bottom: -200px;
-    margin-left: 5%;
-  }
-}
 
 #menu.navbar-default {
   background-color: rgb(0, 0, 0);
@@ -307,6 +296,28 @@ a:focus,
   outline: none;
   outline-offset: none;
 }
+@media screen and (max-width: 768px) {
+  #menu h2 {
+    font-size: 25px;
+    font-weight: 200;
+    background: linear-gradient(to right, #ffffff 0%, #a9a8a3 100%);
+    margin-bottom: 20px;
+    /* Set the background color */
+    /* Mask the color to the text, and remove the rest  */
+    -webkit-background-clip: text;
+    /* Make the text fill color value transparent so the masked background color comes through */
+    -webkit-text-fill-color: transparent;
+    margin-top: -10px;
+    margin-bottom: -200px;
+    margin-left: 5%;
+  }
+  #menu.navbar-default .navbar-nav > li:hover {
+    animation: none;
+    /* When the animation is finished, start again */
+    cursor: crosshair;
+  }
+  
+}
 /* Header Section */
 #header {
   background-color: #000;
@@ -318,7 +329,7 @@ a:focus,
 
 #header h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 5vw;
+  font-size: 7.5vw;
   font-weight: 700;
   color: #fff;
   text-transform: none;
@@ -326,7 +337,7 @@ a:focus,
   margin-bottom: 0;
   text-align: start;
   position: absolute;
-  top: 42%;
+  top: 38%;
   left: 25.5%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -390,6 +401,7 @@ a:focus,
   z-index: 1;
   top: 16%;
   left: 57%;
+  filter: brightness(90%);
 }
 #video {
   object-fit: contain;
@@ -399,7 +411,7 @@ a:focus,
   animation-delay: 0.7s;
   -webkit-mask: radial-gradient(
     circle at 50% 50%,
-    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.24),
     rgba(0, 0, 0, 0)
   );
   filter: blur(1px) grayscale(0.9);
@@ -500,7 +512,9 @@ a:focus,
     padding-top: 10%;
     padding-bottom: 15%;
     background-color: #000 !important;
+    object-fit: cover;
     z-index: 9999999;
+    filter: blur(0px) grayscale(90%);
   }
   .headerPhoto {
     top: 34%;
@@ -983,96 +997,6 @@ a:focus,
   }
 }
 /* digital explosion */
-.digital {
-  animation: explodeIn 0.5s;
-}
-@keyframes explodeIn {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-.wave {
-  opacity: 0;
-  animation-delay: 4s;
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 80% 80%; /* Pivot around the bottom-left palm */
-  display: inline-block;
-}
-.vl {
-  border-left: 2px solid #ffbb00;
-  height: 300px;
-  position: absolute;
-  top: 100;
-  animation: slideleftright 2s forwards 1s;
-  animation-delay: 3.2s;
-  opacity: 0;
-}
-@keyframes slideleftright {
-  0% {
-    left: 0;
-  }
-  30% {
-    opacity: 1;
-    left: 600px;
-  }
-  60% {
-    filter: blur(5px);
-    left: 0px;
-    top: 120px;
-  }
-  80% {
-    filter: blur(1px);
-    left: 780px;
-    top: 100px;
-  }
-  100% {
-    filter: blur(5px);
-    opacity: 0;
-    left: 50px;
-    top: 140px;
-  }
-}
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  10% {
-    transform: rotate(14deg);
-    opacity: 1;
-  } /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-    opacity: 1;
-  }
-  30% {
-    transform: rotate(14deg);
-    opacity: 1;
-  }
-  40% {
-    transform: rotate(-4deg);
-    opacity: 1;
-  }
-  50% {
-    transform: rotate(10deg);
-    opacity: 1;
-  }
-  60% {
-    transform: rotate(0deg);
-    opacity: 1;
-  } /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-}
 .spin:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: rotate 0.5s;
@@ -1324,14 +1248,14 @@ a:focus,
   .aboutButton {
     position: absolute;
     top: 95%;
-    left: 27.5%;
+    left: 30%;
     color: rgb(32, 32, 32);
     background: linear-gradient(
       45deg,
       rgba(236, 190, 26, 0.9),
       rgba(217, 183, 30, 0.8)
     );
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
     font-family: "Share Tech Mono", monospace;
     z-index: 5 !important;
@@ -1669,7 +1593,7 @@ a:focus,
   z-index: 999;
   top: 89%;
   left: 20%;
-  filter: brightness(80%) !important;
+  filter: brightness(80%);
 }
 
 .responsive {
@@ -2452,6 +2376,28 @@ a:focus,
   transition: all 0.3s;
   transform: rotate3d(0, 0, 1, 360deg);
   transition-delay: 300ms;
+}
+@media screen and (max-width: 768px) {
+  .bord:hover .spinner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    transition: all 0.3s;
+    transform: none !important;
+    transition-delay: 300ms;
+  }
+  #menu.navbar-default .navbar-nav > li > a:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background: transparent;
+    content: "";
+    transition: width 0.2s;
+  }
 }
 .previewImg {
   align-self: center;
