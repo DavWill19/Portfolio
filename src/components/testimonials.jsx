@@ -1,5 +1,7 @@
 import { Fade } from 'react-awesome-reveal';
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import { grep } from 'jquery';
 
 export const Testimonials = (props) => {
   const [image, setImage] = React.useState('');
@@ -11,6 +13,228 @@ export const Testimonials = (props) => {
   const [type, setType] = React.useState('');
 
 
+
+  function Port1() {
+    const { ref, inView, entry } = useInView({
+      threshold: 0,
+      trackVisibility: true,
+      delay: 100,
+      rootMargin: "-250px 0px -350px 0px",
+
+    });
+    return (
+      <Fade triggerOnce cascade>
+        <div className='col-md-4 col-sm-6 col-xs-12 noPad noPad'>
+          <div className='testimonial-image'>
+            <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }}
+              data-toggle="modal" data-target="#exampleModal" onClick={() => {
+                setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/crewcoinweb');
+                setImage('./img/crewcoinPreview.png'); setTitle('Crew Coin Web Preview'); setUrl(`https://www.crewcoin.app/`); setText('www.crewcoin.app');
+              }}
+              className='previewImg' src={'../img/crewcoinPreviewSmall.png'} alt='testimonial' />
+            <h3 className='text-center'>Crew Coin - Web</h3>
+          </div>
+        </div>
+      </Fade>
+    )
+  }
+  function Port2() {
+    const { ref, inView, entry } = useInView({
+      threshold: 0,
+      trackVisibility: true,
+      delay: 100,
+      rootMargin: "-250px 0px -350px 0px",
+
+    });
+    return (
+      <Fade delay={500} triggerOnce cascade>
+        <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+          <div className='testimonial-image'>
+            <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }}
+              data-toggle="modal" data-target="#exampleModal" onClick={() => {
+                setType('phone'); setDesktop(''); setgitUrl('https://github.com/DavWill19/crewcoin');
+                setImage('./img/phone2.gif'); setTitle('Crew Coin App Preview'); setUrl(`https://www.crewcoin.app/`); setText('www.crewcoin.app');
+              }}
+              className='previewImg' src={'../img/crewcoinappPreview2Small.png'} alt='testimonial' />
+            <h3 className='text-center'>Crew Coin - Mobile App</h3>
+          </div>
+        </div>
+      </Fade>
+
+    )
+  }
+  function Port3() {
+    const { ref, inView, entry } = useInView({
+      threshold: 0,
+      trackVisibility: true,
+      delay: 100,
+      rootMargin: "-250px 0px -350px 0px",
+
+    });
+    return (
+      <Fade delay={100} triggerOnce cascade>
+        <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+          <div className='testimonial-image'>
+          <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }}
+            data-toggle="modal" data-target="#exampleModal" onClick={() => {
+              setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/chiplocked');
+              setImage('./img/chiplockedPreview.png'); setTitle('Chip-locked Preview'); setUrl(`https://www.chiplocked.com/`); setText('www.chiplocked.com');
+            }}
+              className='previewImg' src={'../img/chiplockedPreviewSmall.png'} alt='testimonial' />
+            <h3 className='text-center'>Chip Locked Web</h3>
+          </div>
+        </div>
+      </Fade>
+    )
+  }
+  function Port4() {
+    const { ref, inView, entry } = useInView({
+      threshold: 0,
+      trackVisibility: true,
+      delay: 100,
+      rootMargin: "-250px 0px -350px 0px",
+
+    });
+    return (
+      <Fade delay={600} triggerOnce cascade>
+        <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+          <div className='testimonial-image'>
+          <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }} 
+            data-toggle="modal" data-target="#exampleModal" onClick={() => {
+              setType('desktop'); setgitUrl('https://github.com/DavWill19/borrowloan');
+              setDesktop('Borrow and Loan Inventory Control App / Electron');
+              setImage('./img/borrowVid.gif'); setTitle('Inventory Control Preview'); setUrl(`#testimonials`); setText('');
+            }}
+              className='previewImg' src={'../img/borrowLoan.png'} alt='testimonial' />
+            <h3 className='text-center'>Inventory Desktop Control App</h3>
+          </div>
+        </div>
+      </Fade>
+    )
+  }
+  function Port5() {
+    const { ref, inView, entry } = useInView({
+      threshold: 0,
+      trackVisibility: true,
+      delay: 100,
+      rootMargin: "-250px 0px -350px 0px",
+
+    });
+    return (
+      <Fade delay={700} triggerOnce cascade>
+        <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+          <div className='testimonial-image'>
+          <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }}
+            data-toggle="modal" data-target="#exampleModal" onClick={() => {
+              setType('desktop');
+              setDesktop('Employee Performance Tracking App / Electron');
+              setImage('./img/reviewVid.gif'); setTitle('Review Scheduling App Preview'); setUrl(`#testimonials`); setText('');
+            }}
+              className='previewImg' src={'../img/reviewScheduler.png'} alt='testimonial' />
+            <h3 className='text-center'>Employee Review Desktop App</h3>
+          </div>
+        </div>
+      </Fade>
+    )
+  }
+  function Port6() {
+    const { ref, inView, entry } = useInView({
+      threshold: 0,
+      trackVisibility: true,
+      delay: 100,
+      rootMargin: "-250px 0px -350px 0px",
+
+    });
+    return (
+      <Fade delay={800} triggerOnce cascade>
+        <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+          <div className='testimonial-image'>
+          <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }} 
+            data-toggle="modal" data-target="#exampleModal" onClick={() => {
+              setType('desktop'); setgitUrl('https://github.com/DavWill19/moralesurveyreact');
+              setDesktop('Employee Morale Tracking App');
+              setImage('./img/morale.png'); setTitle('Employee Morale App Preview'); setUrl(`#testimonials`); setText('');
+            }}
+              className='previewImg' src={'../img/morale.png'} alt='testimonial' />
+            <h3 className='text-center'>Employee Morale Survey Web</h3>
+          </div>
+        </div>
+      </Fade>
+    )
+  }
+  function Port7() {
+    const { ref, inView, entry } = useInView({
+      threshold: 0,
+      trackVisibility: true,
+      delay: 100,
+      rootMargin: "-250px 0px -350px 0px",
+
+    });
+    return (
+      <Fade delay={200} triggerOnce cascade>
+        <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+          <div className='testimonial-image'>
+          <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }}
+            data-toggle="modal" data-target="#exampleModal" onClick={() => {
+              setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/Wenventure');
+              setImage('./img/wenventurePreview.png'); setTitle('Wenventure Inc Preview'); setUrl(`https://davwill19.github.io/Wenventure/`); setText('www.wenventureinc.com');
+            }}
+              className='previewImg' src={'../img/wenventurePreviewSmall.png'} alt='testimonial' />
+            <h3 className='text-center'>Wenventure Inc Web</h3>
+          </div>
+        </div>
+      </Fade>
+
+    )
+  }
+  function Port8() {
+    const { ref, inView, entry } = useInView({
+      threshold: 0,
+      trackVisibility: true,
+      delay: 100,
+      rootMargin: "-250px 0px -350px 0px",
+
+    });
+    return (
+      <Fade delay={300} triggerOnce cascade>
+        <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
+          <div className='testimonial-image'>
+          <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }} 
+            data-toggle="modal" data-target="#exampleModal" onClick={() => {
+              setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/PaddleApp');
+              setImage('./img/paddlePreview.png'); setTitle('Paddle Pa Preview'); setUrl(`https://www.paddle-pa.com/`); setText('www.paddle-pa.com');
+            }}
+              className='previewImg' src={'../img/paddlePreviewSmall.png'} alt='testimonial' />
+            <h3 className='text-center'>Paddle Web App</h3>
+          </div>
+        </div>
+      </Fade>
+    )
+  }
+  function Port9() {
+    const { ref, inView, entry } = useInView({
+      threshold: 0,
+      trackVisibility: true,
+      delay: 100,
+      rootMargin: "-250px 0px -350px 0px",
+
+    });
+    return (
+      <Fade delay={400} triggerOnce cascade>
+        <div className=' d-none d-lg-block col-md-4 noPad'>
+          <div className='testimonial-image'>
+          <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }} 
+            data-toggle="modal" data-target="#exampleModal" onClick={() => {
+              setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/foxlandscaping');
+              setImage('./img/foxPreview2.png'); setTitle('Fox Landscaping Preview'); setUrl(`https://fox-landscaping.netlify.app/`); setText('www.fox-landscaping.com');
+            }}
+              className='previewImg' src={'../img/foxPreviewSmall.png'} alt='testimonial' />
+            <h3 className='text-center'>Fox Landscaping Web</h3>
+          </div>
+        </div>
+      </Fade>
+    )
+  }
   function appStore() {
     if (type === 'phone') {
       // document.querySelector('.modal-content').style.height = '70%';
@@ -92,117 +316,15 @@ export const Testimonials = (props) => {
       </div>
 
       <div className=' dashed row'>
-        <Fade triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad noPad'>
-            <div className='testimonial-image'>
-              <img  data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/crewcoinweb');
-                setImage('./img/crewcoinPreview.png'); setTitle('Crew Coin Web Preview'); setUrl(`https://www.crewcoin.app/`); setText('www.crewcoin.app');
-              }}
-              className='previewImg' src={'../img/crewcoinPreviewSmall.png'} alt='testimonial' />
-              <h3 className='text-center'>Crew Coin - Web</h3>
-            </div>
-          </div>
-        </Fade>
-        <Fade delay={500} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType('phone'); setDesktop(''); setgitUrl('https://github.com/DavWill19/crewcoin');
-                setImage('./img/phone2.gif'); setTitle('Crew Coin App Preview'); setUrl(`https://www.crewcoin.app/`); setText('www.crewcoin.app');
-              }}
-                className='previewImg' src={'../img/crewcoinappPreview2Small.png'} alt='testimonial' />
-              <h3 className='text-center'>Crew Coin - Mobile App</h3>
-            </div>
-          </div>
-        </Fade>
-        <Fade delay={100} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/chiplocked');
-                setImage('./img/chiplockedPreview.png'); setTitle('Chip-locked Preview'); setUrl(`https://www.chiplocked.com/`); setText('www.chiplocked.com');
-              }}
-                className='previewImg' src={'../img/chiplockedPreviewSmall.png'} alt='testimonial' />
-              <h3 className='text-center'>Chip Locked Web</h3>
-            </div>
-          </div>
-        </Fade>
-        <Fade delay={600} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType('desktop'); setgitUrl('https://github.com/DavWill19/borrowloan');
-                setDesktop('Borrow and Loan Inventory Control App / Electron');
-                setImage('./img/borrowVid.gif'); setTitle('Inventory Control Preview'); setUrl(`#testimonials`); setText('');
-              }}
-                className='previewImg' src={'../img/borrowLoan.png'} alt='testimonial' />
-              <h3 className='text-center'>Inventory Desktop Control App</h3>
-            </div>
-          </div>
-        </Fade>
-        <Fade delay={700} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType('desktop');
-                setDesktop('Employee Performance Tracking App / Electron');
-                setImage('./img/reviewVid.gif'); setTitle('Review Scheduling App Preview'); setUrl(`#testimonials`); setText('');
-              }}
-                className='previewImg' src={'../img/reviewScheduler.png'} alt='testimonial' />
-              <h3 className='text-center'>Employee Review Desktop App</h3>
-            </div>
-          </div>
-        </Fade>
-        <Fade delay={800} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType('desktop'); setgitUrl('https://github.com/DavWill19/moralesurveyreact');
-                setDesktop('Employee Morale Tracking App');
-                setImage('./img/morale.png'); setTitle('Employee Morale App Preview'); setUrl(`#testimonials`); setText('');
-              }}
-                className='previewImg' src={'../img/morale.png'} alt='testimonial' />
-              <h3 className='text-center'>Employee Morale Survey Web</h3>
-            </div>
-          </div>
-        </Fade>
-        <Fade delay={200} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/Wenventure');
-                setImage('./img/wenventurePreview.png'); setTitle('Wenventure Inc Preview'); setUrl(`https://davwill19.github.io/Wenventure/`); setText('www.wenventureinc.com');
-              }}
-                className='previewImg' src={'../img/wenventurePreviewSmall.png'} alt='testimonial' />
-              <h3 className='text-center'>Wenventure Inc Web</h3>
-            </div>
-          </div>
-        </Fade>
-        <Fade delay={300} triggerOnce cascade>
-          <div className='col-md-4 col-sm-6 col-xs-12 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/PaddleApp');
-                setImage('./img/paddlePreview.png'); setTitle('Paddle Pa Preview'); setUrl(`https://www.paddle-pa.com/`); setText('www.paddle-pa.com');
-              }}
-                className='previewImg' src={'../img/paddlePreviewSmall.png'} alt='testimonial' />
-              <h3 className='text-center'>Paddle Web App</h3>
-            </div>
-          </div>
-        </Fade>
-        <Fade delay={400} triggerOnce cascade>
-          <div className=' d-none d-lg-block col-md-4 noPad'>
-            <div className='testimonial-image'>
-              <img data-toggle="modal" data-target="#exampleModal" onClick={() => {
-                setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/foxlandscaping');
-                setImage('./img/foxPreview2.png'); setTitle('Fox Landscaping Preview'); setUrl(`https://fox-landscaping.netlify.app/`); setText('www.fox-landscaping.com');
-              }}
-                className='previewImg' src={'../img/foxPreviewSmall.png'} alt='testimonial' />
-              <h3 className='text-center'>Fox Landscaping Web</h3>
-            </div>
-          </div>
-        </Fade>
+        {Port1()}
+        {Port2()}
+        {Port3()}
+        {Port4()}
+        {Port5()}
+        {Port6()}
+        {Port7()}
+        {Port8()}
+        {Port9()}
       </div>
     </div>
   );

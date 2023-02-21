@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb {
     width: auto;
     height: auto;
     overflow-x: hidden;
-    width: 100vw!important;
+    width: 100vw !important;
   }
 }
 
@@ -137,7 +137,6 @@ hr {
   margin-top: -10px;
   margin-bottom: -20px;
 }
-
 
 #menu.navbar-default {
   background-color: rgb(0, 0, 0);
@@ -316,7 +315,6 @@ a:focus,
     /* When the animation is finished, start again */
     cursor: crosshair;
   }
-  
 }
 /* Header Section */
 #header {
@@ -505,7 +503,8 @@ a:focus,
 @media screen and (max-width: 450px) {
   #header {
     background-color: #000;
-    padding-bottom: 30px !important;
+    padding-bottom: 0px !important;
+    margin-bottom: -180px;
   }
   #video {
     height: 110%;
@@ -610,7 +609,7 @@ a:focus,
 }
 /* About Section */
 .modal {
-  overflow-y: hidden!important;
+  overflow-y: hidden !important;
 }
 .modal-content {
   height: auto;
@@ -1195,12 +1194,11 @@ a:focus,
 }
 @media screen and (max-width: 768px) {
   .aboutButton {
-    z-index: 999999!important;
+    z-index: 999999 !important;
     position: absolute;
     top: 90%;
     left: 35%;
   }
-  
 }
 @keyframes rotatehalf {
   0% {
@@ -1247,15 +1245,15 @@ a:focus,
 @media screen and (max-width: 450px) {
   .aboutButton {
     position: absolute;
-    top: 95%;
-    left: 30%;
+    top: 88%;
+    left: 31%;
     color: rgb(32, 32, 32);
     background: linear-gradient(
       45deg,
       rgba(236, 190, 26, 0.9),
       rgba(217, 183, 30, 0.8)
     );
-    font-size: 2.5rem;
+    font-size: 2.9rem;
     font-weight: 400;
     font-family: "Share Tech Mono", monospace;
     z-index: 5 !important;
@@ -1274,6 +1272,9 @@ a:focus,
   }
   .mobileImg {
     opacity: 0;
+  }
+  .daveDiv {
+    display: none;
   }
   @keyframes rotatehalf {
     0% {
@@ -1306,7 +1307,7 @@ a:focus,
   }
   .dot {
     position: absolute;
-    top: 46%;
+    top: 36%;
     left: 28.5%;
     height: 2px;
     width: 6px;
@@ -1317,7 +1318,7 @@ a:focus,
   }
   .dot2 {
     position: absolute;
-    top: 18%;
+    top: 8%;
     left: 67%;
     height: 2px;
     width: 6px;
@@ -1328,7 +1329,7 @@ a:focus,
   }
   .dot3 {
     position: absolute;
-    top: 24%;
+    top: 14%;
     left: 36%;
     height: 2px;
     width: 6px;
@@ -1339,7 +1340,7 @@ a:focus,
   }
   .dot4 {
     position: absolute;
-    top: 56%;
+    top: 46%;
     left: 72%;
     height: 2px;
     width: 6px;
@@ -1350,8 +1351,8 @@ a:focus,
   }
   .dot5 {
     position: absolute;
-    top: 78%;
-    left: 66.5%;
+    top: 67.5%;
+    left: 65.5%;
     height: 2px;
     width: 6px;
     transform: rotate(135deg);
@@ -1361,8 +1362,8 @@ a:focus,
   }
   .dot6 {
     position: absolute;
-    top: 85%;
-    left: 36%;
+    top: 74%;
+    left: 37%;
     height: 2px;
     width: 6px;
     transform: rotate(135deg);
@@ -2024,8 +2025,8 @@ a:focus,
     display: block;
   }
   #about {
-    margin-top: -50px;
-    margin-bottom: -50px;
+    margin-top: -10px;
+    margin-bottom: -100px;
   }
   #about a {
     font-size: 4.5vw;
@@ -2034,11 +2035,7 @@ a:focus,
     border: 2px solid #d4d4d4;
   }
   .contactButton {
-    position: absolute;
-    height: auto;
-    z-index: 999;
-    top: 13%;
-    left: 64%;
+    display: none;
   }
   .scrolling-words-container {
     margin-top: -130px !important;
@@ -2096,7 +2093,7 @@ a:focus,
     width: 25%;
     height: auto;
     z-index: 999;
-    top: 10%;
+    top: 1%;
     left: 69.5%;
   }
   .cssImg {
@@ -2104,7 +2101,7 @@ a:focus,
     width: 22%;
     height: auto;
     z-index: 999;
-    top: 15%;
+    top: 5%;
     left: 40%;
   }
   .jsImg {
@@ -2112,7 +2109,7 @@ a:focus,
     width: 23%;
     height: auto;
     z-index: 999;
-    top: 22%;
+    top: 12%;
     left: 14%;
   }
   .bsImg {
@@ -2120,7 +2117,7 @@ a:focus,
     width: 22%;
     height: auto;
     z-index: 999;
-    top: 35%;
+    top: 25%;
     left: 14%;
   }
   .reactImg {
@@ -2128,7 +2125,7 @@ a:focus,
     width: 60%;
     height: auto;
     z-index: 999;
-    top: 50.5%;
+    top: 40.5%;
     left: 34.5%;
   }
   .electronImg {
@@ -2136,38 +2133,38 @@ a:focus,
     width: 25%;
     height: auto;
     z-index: 999;
-    top: 53%;
+    top: 43%;
     left: 72%;
   }
   .nodeJsImg {
     position: absolute;
-    width: 33%;
+    width: 30%;
     height: auto;
     z-index: 999;
-    top: 62%;
-    left: 65.5%;
+    top: 53%;
+    left: 69%;
   }
   .mongoDbImg {
     position: absolute;
     width: 32%;
     height: auto;
     z-index: 999;
-    top: 80.5%;
+    top: 70.5%;
     left: 8.5%;
   }
   .gitImg {
     display: block;
     position: absolute;
-    width: 31%;
+    width: 27%;
     height: auto;
     z-index: 999;
-    top: 74%;
+    top: 64%;
     left: 39%;
   }
   .responsive {
     width: 79% !important;
     position: absolute;
-    top: 28.5%;
+    top: 18.5%;
     left: 24%;
     z-index: 1 !important;
   }
@@ -2180,7 +2177,7 @@ a:focus,
   .responsive3 {
     width: 74% !important;
     position: absolute;
-    top: 57%;
+    top: 47%;
     left: 2%;
     z-index: 1 !important;
     filter: brightness(15%);
@@ -2197,18 +2194,14 @@ a:focus,
   }
 
   .half {
-    width: 45.25%;
-    position: absolute;
-    z-index: 999;
-    top: 7.5%;
-    margin-left: 40.5%;
+    display: none;
   }
 
   .half2 {
     width: 100%;
     padding: 0 10px;
     position: absolute;
-    top: 37%;
+    top: 27%;
     left: 3%;
     z-index: 999;
     float: left;
@@ -2219,7 +2212,7 @@ a:focus,
     width: 150%;
     padding: 0 10px;
     position: absolute;
-    top: 68%;
+    top: 58%;
     left: 8%;
     z-index: 999;
     float: left;
