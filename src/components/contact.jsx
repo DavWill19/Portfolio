@@ -3,6 +3,31 @@ import emailjs from 'emailjs-com'
 import config from '../config'
 import React from "react";
 import { Fade, Flip } from 'react-awesome-reveal';
+import toast, { Toaster } from 'react-hot-toast';
+
+const notify = () => toast('Message Sent!',
+  {
+    // checkmark emoji
+    icon: '✅'
+    ,
+    style: {
+      borderRadius: '10px',
+      background: '#333',
+      color: '#fff',
+    },
+  }
+);
+
+function mailAnimation() {
+
+  return (
+    <div>
+      <img className='mail' src="./img/envelope.png" alt="mail" />
+    </div>
+  )
+}
+
+
 
 const api_key = config.API_KEY;
 
@@ -24,6 +49,7 @@ export const Contact = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setDisable(true)
+    document.querySelector('.mail').classList.add('mailAnimation')
     console.log(name, email, message)
     emailjs
       .sendForm(
@@ -33,7 +59,7 @@ export const Contact = (props) => {
         (result) => {
           console.log(result.text)
           clearState()
-          alert('Message sent!')
+          notify()
           setDisable(false)
         },
         (error) => {
@@ -45,6 +71,7 @@ export const Contact = (props) => {
   return (
     <div>
       <div id='contact'>
+        <Toaster />
         <div className='container'>
           <div className='col-md-8'>
             <div className='row'>
@@ -107,10 +134,11 @@ export const Contact = (props) => {
                     <p className='help-block text-danger'></p>
                   </div>
                   <div id='success'></div>
+                  {mailAnimation()}
                   <button type='submit'
-                  // disable button after submit
-                  disabled={disable}
-                   className='btn btn-custom btn-lg'>
+                    // disable button after submit
+                    disabled={disable}
+                    className='btn btn-custom btn-lg'>
                     Send Message
                   </button>
                 </form>

@@ -316,11 +316,11 @@ export const About = (props) => {
               <p data-dismiss="modal" className="grow"><span class="wave">👋</span> Hi, I'm Dave.
                 <span> </span><span className="op1 m1 animate-back">I create digital experiences that exceed the </span><span className="op2 m2 animate-back">needs of clients and users. I have a </span><span className="op9 m4 animate-back">background in business and bring a </span> <span className="op2 m4 animate-back">commitment to delivering exceptional results, which is evident in my portfolio.
 
-                  I possess a </span><span className="op2 m3 animate-back">comprehensive understanding of a wide </span><span className="op3 m3 animate-back">range of web development technologies, including</span> Bootstrap, React, Node.js, Express, MongoDB, Electron.js, <span className="op4 m5 animate-back">React-Native, and more. I am skilled in using these technologies to create<span className="op1 m1 animate-back"> highly functional websites and</span> applications.
+                  I possess a </span><span className="op2 m3 animate-back">comprehensive understanding of a wide </span><span className="op3 m3 animate-back">range of modern web development technologies, including</span> Bootstrap, React, Node.js, Express, MongoDB, Electron.js, <span className="op4 m5 animate-back">React-Native, and more. I am capable of managing projects from start to finish. </span> 
 
-                    I am confident in my ability to manage complex projects</span> from start to <span className="op9 m1 animate-back">finish and ensure that each </span><span className="op5 m5 animate-back">project meets the highest standards of quality. </span>
 
-                <span className="op6 m3 animate-back">I am seeking opportunities to grow my </span><span className="op7 m1 animate-back">skills as a web developer, and to contribute my expertise to </span><span className="op8 m4 animate-back">organizations and projects that share my passion for excellence.</span>
+
+                <span className="op6 m3 animate-back"> I believe that websites and mobile applications </span><span className="op7 m1 animate-back">should be affordable. I provide free estimates for commercial projects. </span><span className="op8 m4 animate-back">If you'd like to learn more, drop me a message!</span>
 
 
 

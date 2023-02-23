@@ -11,6 +11,7 @@ export const Testimonials = (props) => {
   const [gitUrl, setgitUrl] = React.useState('');
   const [desktop, setDesktop] = React.useState('');
   const [type, setType] = React.useState('');
+  const [description, setDescription] = React.useState('');
 
 
 
@@ -29,7 +30,7 @@ export const Testimonials = (props) => {
             <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }}
               data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/crewcoinweb');
-                setImage('./img/crewcoinPreview.png'); setTitle('Crew Coin Web Preview'); setUrl(`https://www.crewcoin.app/`); setText('www.crewcoin.app');
+                setImage('./img/crewcoinPreview.png'); setTitle('Crew Coin Web Preview'); setUrl(`https://www.crewcoin.app/`); setText('www.crewcoin.app'); setDescription('React / MongoDB / Express / Node ');
               }}
               className='previewImg' src={'../img/crewcoinPreviewSmall.png'} alt='testimonial' />
             <h3 className='text-center'>Crew Coin - Web</h3>
@@ -53,7 +54,7 @@ export const Testimonials = (props) => {
             <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }}
               data-toggle="modal" data-target="#exampleModal" onClick={() => {
                 setType('phone'); setDesktop(''); setgitUrl('https://github.com/DavWill19/crewcoin');
-                setImage('./img/phone2.gif'); setTitle('Crew Coin App Preview'); setUrl(`https://www.crewcoin.app/`); setText('www.crewcoin.app');
+                setImage('./img/phone2.gif'); setTitle('Crew Coin App Preview'); setUrl(`https://www.crewcoin.app/`); setText('www.crewcoin.app'); setDescription('React Native / MongoDB / Express / Node ');
               }}
               className='previewImg' src={'../img/crewcoinappPreview2Small.png'} alt='testimonial' />
             <h3 className='text-center'>Crew Coin - Mobile App</h3>
@@ -78,7 +79,7 @@ export const Testimonials = (props) => {
           <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }}
             data-toggle="modal" data-target="#exampleModal" onClick={() => {
               setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/chiplocked');
-              setImage('./img/chiplockedPreview.png'); setTitle('Chip-locked Preview'); setUrl(`https://www.chiplocked.com/`); setText('www.chiplocked.com');
+              setImage('./img/chiplockedPreview.png'); setTitle('Chip-locked Preview'); setUrl(`https://www.chiplocked.com/`); setText('www.chiplocked.com'); setDescription('React / MongoDB / Express / Node ');
             }}
               className='previewImg' src={'../img/chiplockedPreviewSmall.png'} alt='testimonial' />
             <h3 className='text-center'>Chip Locked Web</h3>
@@ -103,7 +104,7 @@ export const Testimonials = (props) => {
             data-toggle="modal" data-target="#exampleModal" onClick={() => {
               setType('desktop'); setgitUrl('https://github.com/DavWill19/borrowloan');
               setDesktop('Borrow and Loan Inventory Control App / Electron');
-              setImage('./img/borrowVid.gif'); setTitle('Inventory Control Preview'); setUrl(`#testimonials`); setText('');
+              setImage('./img/borrowVid.gif'); setTitle('Inventory Control Preview'); setUrl(`#testimonials`); setText(''); setDescription('React / ElectronJs / MongoDB / Express / Node ');
             }}
               className='previewImg' src={'../img/borrowLoan.png'} alt='testimonial' />
             <h3 className='text-center'>Inventory Desktop Control App</h3>
@@ -128,7 +129,7 @@ export const Testimonials = (props) => {
             data-toggle="modal" data-target="#exampleModal" onClick={() => {
               setType('desktop');
               setDesktop('Employee Performance Tracking App / Electron');
-              setImage('./img/reviewVid.gif'); setTitle('Review Scheduling App Preview'); setUrl(`#testimonials`); setText('');
+              setImage('./img/reviewVid.gif'); setTitle('Review Scheduling App Preview'); setUrl(`#testimonials`); setText(''); setDescription('React / ElectronJs / MongoDB / Express / Node ');
             }}
               className='previewImg' src={'../img/reviewScheduler.png'} alt='testimonial' />
             <h3 className='text-center'>Employee Review Desktop App</h3>
@@ -153,7 +154,7 @@ export const Testimonials = (props) => {
             data-toggle="modal" data-target="#exampleModal" onClick={() => {
               setType('desktop'); setgitUrl('https://github.com/DavWill19/moralesurveyreact');
               setDesktop('Employee Morale Tracking App');
-              setImage('./img/morale.png'); setTitle('Employee Morale App Preview'); setUrl(`#testimonials`); setText('');
+              setImage('./img/morale.png'); setTitle('Employee Morale App Preview'); setUrl(`#testimonials`); setText(''); setDescription('React  / MongoDB / Express / Node ');
             }}
               className='previewImg' src={'../img/morale.png'} alt='testimonial' />
             <h3 className='text-center'>Employee Morale Survey Web</h3>
@@ -177,7 +178,7 @@ export const Testimonials = (props) => {
           <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }}
             data-toggle="modal" data-target="#exampleModal" onClick={() => {
               setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/Wenventure');
-              setImage('./img/wenventurePreview.png'); setTitle('Wenventure Inc Preview'); setUrl(`https://davwill19.github.io/Wenventure/`); setText('www.wenventureinc.com');
+              setImage('./img/wenventurePreview.png'); setTitle('Wenventure Inc Preview'); setUrl(`https://davwill19.github.io/Wenventure/`); setText('www.wenventureinc.com'); setDescription('Vanilla JS / HTML / CSS ');
             }}
               className='previewImg' src={'../img/wenventurePreviewSmall.png'} alt='testimonial' />
             <h3 className='text-center'>Wenventure Inc Web</h3>
@@ -202,7 +203,7 @@ export const Testimonials = (props) => {
           <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }} 
             data-toggle="modal" data-target="#exampleModal" onClick={() => {
               setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/PaddleApp');
-              setImage('./img/paddlePreview.png'); setTitle('Paddle Pa Preview'); setUrl(`https://www.paddle-pa.com/`); setText('www.paddle-pa.com');
+              setImage('./img/paddlePreview.png'); setTitle('Paddle Pa Preview'); setUrl(`https://www.paddle-pa.com/`); setText('www.paddle-pa.com'); setDescription('Vanilla JS / HTML / CSS ');
             }}
               className='previewImg' src={'../img/paddlePreviewSmall.png'} alt='testimonial' />
             <h3 className='text-center'>Paddle Web App</h3>
@@ -226,7 +227,7 @@ export const Testimonials = (props) => {
           <img ref={ref} style={{ filter: inView ? 'grayscale(0%)' : 'grayscale(100%)' }} 
             data-toggle="modal" data-target="#exampleModal" onClick={() => {
               setType(''); setDesktop(''); setgitUrl('https://github.com/DavWill19/foxlandscaping');
-              setImage('./img/foxPreview2.png'); setTitle('Fox Landscaping Preview'); setUrl(`https://fox-landscaping.netlify.app/`); setText('www.fox-landscaping.com');
+              setImage('./img/foxPreview2.png'); setTitle('Fox Landscaping Preview'); setUrl(`https://fox-landscaping.netlify.app/`); setText('www.fox-landscaping.com'); setDescription('Vanilla JS / HTML / CSS ');
             }}
               className='previewImg' src={'../img/foxPreviewSmall.png'} alt='testimonial' />
             <h3 className='text-center'>Fox Landscaping Web</h3>
@@ -275,6 +276,9 @@ export const Testimonials = (props) => {
             </div>
             <div className="modal-footer text-center">
               <div className='row'>
+              <div className='lightgray col-xs-12 mt-2 mb-2'>
+                  {description}
+                </div>
                 <div className='col text-center'>
                   <a href={gitUrl}>
                     <i className='icon fa fa-github hoverGold'></i>
