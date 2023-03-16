@@ -1,3 +1,3 @@
 Check it out here
 
-devwilliams.netlify.app
+https://devwilliams.netlify.app
