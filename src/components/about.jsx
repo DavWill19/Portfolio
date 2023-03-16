@@ -91,7 +91,7 @@ export const About = (props) => {
     return (
       <div className='htmlImg'>
         <Fade triggerOnce cascade direction="right">
-          <img className="pulse spin" alt="icon" src={'../img/htmlIcon.png'} />
+          <img className="pulse " alt="icon" src={'../img/htmlIcon.png'} />
         </Fade>
       </div>
     )
@@ -100,7 +100,7 @@ export const About = (props) => {
     return (
       <div className='CssImg'>
         <Fade triggerOnce cascade delay={100} direction="right">
-          <img className="pulse spin" alt="icon" src={'../img/cssIcon.png'} />
+          <img className="pulse " alt="icon" src={'../img/cssIcon.png'} />
         </Fade>
       </div>
     )
@@ -109,7 +109,7 @@ export const About = (props) => {
     return (
       <div className='JsImg'>
         <Fade triggerOnce cascade delay={200} direction="right">
-          <img className="pulse spin" alt="icon" src={'../img/javascriptIcon.png'} />
+          <img className="pulse " alt="icon" src={'../img/javascriptIcon.png'} />
         </Fade>
       </div>
     )
@@ -118,7 +118,7 @@ export const About = (props) => {
     return (
       <div className='bsImg'>
         <Fade triggerOnce cascade direction="down">
-          <img className="pulse spin" alt="icon" src={'../img/bootstrapIcon.png'} />
+          <img className="pulse " alt="icon" src={'../img/bootstrapIcon.png'} />
         </Fade>
       </div>
     )
@@ -136,7 +136,7 @@ export const About = (props) => {
     return (
       <div className='electronImg'>
         <Fade triggerOnce cascade delay={200} direction="left">
-          <img className="pulse spin" alt="icon" src={'../img/electronjsIcon.png'} />
+          <img className="pulse " alt="icon" src={'../img/electronjsIcon.png'} />
         </Fade>
       </div>
     )
@@ -145,7 +145,7 @@ export const About = (props) => {
     return (
       <div className='nodeJsImg'>
         <Fade triggerOnce cascade direction="down">
-          <img className="pulse spin" alt="icon" src={'../img/nodejsIcon.png'} />
+          <img className="pulse " alt="icon" src={'../img/nodejsIcon.png'} />
         </Fade>
       </div>
     )
@@ -154,7 +154,7 @@ export const About = (props) => {
     return (
       <div className='mongoDbImg'>
         <Fade triggerOnce cascade direction="left">
-          <img className="pulse spin" alt="icon" src={'../img/mongodbIcon.png'} />
+          <img className="pulse " alt="icon" src={'../img/mongodbIcon.png'} />
         </Fade>
       </div>
     )
@@ -163,7 +163,7 @@ export const About = (props) => {
     return (
       <div className='gitImg'>
         <Fade triggerOnce cascade direction="left">
-          <img className="pulse spin" alt="icon" src={'../img/gitIcon.png'} />
+          <img className="pulse " alt="icon" src={'../img/gitIcon.png'} />
         </Fade>
       </div>
     )

@@ -26,6 +26,36 @@ export const Navigation = () => {
       setData('')
     }
 }
+// set aboutButton z-index to 1
+function aboutButton() {
+  setTimeout(() => {
+  document.querySelector('.aboutButton').style.zIndex = 99999999;
+  document.querySelector('.aboutButton').style.zIndex = 0;
+  document.querySelector('.aboutButton').style.transition = 'all 0.05s ease-in-out';
+  }, 500)
+  setTimeout(() => {
+    }, 1000)
+    setTimeout(() => {
+      document.querySelector('.aboutButton').style.zIndex = 99999999;
+      }, 1500)
+      setTimeout(() => {
+        document.querySelector('.aboutButton').style.zIndex = 0;
+        }, 2000)
+        setTimeout(() => {
+          document.querySelector('.aboutButton').style.zIndex = 99999999;
+          }, 2500)
+          setTimeout(() => {
+            document.querySelector('.aboutButton').style.zIndex = 0;
+            }, 3000)
+            setTimeout(() => {
+              document.querySelector('.aboutButton').style.zIndex = 99999999;
+              }, 3500)
+              setTimeout(() => {
+                document.querySelector('.aboutButton').style.zIndex = 0;
+                }, 4600)
+
+  console.log('aboutButton')
+}
 window.addEventListener('resize', checkForWindowResize);
   return (
     <nav id='menu' className='navbar  navbar-default navbar-fixed-top'>
@@ -67,7 +97,7 @@ window.addEventListener('resize', checkForWindowResize);
             </li>
             <li className="bord">
             <div className="spinner"></div>
-              <a href='#aboutButton' className='page-scroll go'>
+              <a onClick={() => {aboutButton()}} href='#aboutButton' className='page-scroll go'>
                 About
               </a>
             </li>

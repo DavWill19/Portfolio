@@ -80,9 +80,7 @@ export const Contact = (props) => {
                   <h2>Contact</h2>
                 </Fade>
                 <Fade direction='left' delay={100} triggerOnce>
-                  <p>
-                    Please fill out the form below and I will
-                    get back to you as soon as possible.
+                  <p>If you have a project you'd like to discuss, please get in touch.
                   </p>
                 </Fade>
               </div>

@@ -1190,7 +1190,7 @@ a:focus,
   font-size: 3.2rem;
   font-weight: 400;
   font-family: "Share Tech Mono", monospace;
-  z-index: 0 !important;
+  z-index: 0;
   cursor: pointer !important;
   border: 8px solid #a09827;
   border-radius: 2px;
